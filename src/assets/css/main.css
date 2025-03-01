@@ -19,3 +19,19 @@
   --breakpoint-7xl: 80rem; /* 1280px */
   --breakpoint-8xl: 88rem; /* 1600px */
 }
+
+/* .feature_slider_btn {
+  @apply absolute top-1/2 -translate-1/2 z-10 rounded-full bg-white flex justify-center items-center shadow-lg cursor-pointer text-red-500 size-12;
+} */
+
+.feature_slider_pagination {
+  @apply flex justify-center items-center gap-1 absolute bottom-10!;
+}
+
+.custom-bullet {
+  @apply size-3 bg-white opacity-100 rounded-full inline-block transition-all duration-300 ease-in-out;
+}
+
+.custom-bullet.swiper-pagination-bullet-active {
+  @apply w-10! h-3 rounded-full bg-[#FFB29C];
+}
