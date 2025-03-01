@@ -20,10 +20,6 @@
   --breakpoint-8xl: 88rem; /* 1600px */
 }
 
-/* .feature_slider_btn {
-  @apply absolute top-1/2 -translate-1/2 z-10 rounded-full bg-white flex justify-center items-center shadow-lg cursor-pointer text-red-500 size-12;
-} */
-
 .feature_slider_pagination {
   @apply flex justify-center items-center gap-1 absolute bottom-10!;
 }

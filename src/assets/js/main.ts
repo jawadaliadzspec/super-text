@@ -13,22 +13,7 @@ document.getElementById('mobileLangBtn')!.addEventListener('click', function () 
   document.getElementById('mobileLangDropdown')!.classList.toggle('hidden');
 });
 
-//  Telco partners slider
-// new Swiper('#telco_partner', {
-//   loop: true,
-//   spaceBetween: 30,
-//   navigation: {
-//     nextEl: '.telco_partner_button_next',
-//     prevEl: '.telco_partner_button_prev'
-//   },
-//   breakpoints: {
-//     320: { slidesPerView: 2 },
-//     480: { slidesPerView: 2 },
-//     640: { slidesPerView: 3 },
-//     768: { slidesPerView: 4 },
-//     1024: { slidesPerView: 5 }
-//   }
-// });
+//  feature slider
 new Swiper('#feature_slider', {
   loop: true,
   pagination: {
@@ -48,5 +33,19 @@ new Swiper('#feature_slider', {
     480: { slidesPerView: 2, spaceBetween: 10, pagination: { enabled: false } },
     672: { slidesPerView: 2, spaceBetween: 10 },
     896: { slidesPerView: 3, spaceBetween: 20 }
+  }
+});
+
+//  testimonials slider
+
+new Swiper('#testimonial_slider', {
+  loop: true,
+  navigation: {
+    nextEl: '#testimonial_btn_next',
+    prevEl: '#testimonial_btn_prev'
+  },
+  breakpoints: {
+    672: { slidesPerView: 2, spaceBetween: 10 },
+    896: { slidesPerView: 2, spaceBetween: 20 }
   }
 });
