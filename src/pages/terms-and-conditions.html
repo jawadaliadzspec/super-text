@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Text</title>
+  </head>
+  <body>
+    <!-- navbar section -->
+    <nav class="bg-white shadow-md w-full fixed top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <img src="../assets/images/header/logo.png" alt="Supertext Logo" class="h-8" />
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex space-x-6 text-gray-700">
+          <a href="#" class="hover:text-red-500">About</a>
+          <a href="#" class="hover:text-red-500">Features</a>
+          <a href="#" class="hover:text-red-500">Use Cases</a>
+          <a href="#" class="hover:text-red-500">For Business</a>
+          <a href="/src/pages/privacy-policy.html" class="hover:text-red-500">Help Center</a>
+        </div>
+
+        <!-- Language & Buttons -->
+        <div class="hidden md:flex items-center space-x-4">
+          <div class="relative">
+            <button id="langBtn" class="flex items-center px-3 py-2 gap-1 rounded-md bg-[#F6FAF8]">
+              <img
+                src="../assets/images/header/language-flag.svg"
+                alt="Lang"
+                class="h-4 w-6 mr-2"
+              />
+              Language
+              <span class="icon-[tabler--chevron-down]"></span>
+            </button>
+            <div id="langDropdown" class="hidden absolute bg-white shadow-md rounded-md w-36 mt-2">
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">🇬🇧 English</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">🇫🇷 French</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">🇩🇪 German</a>
+            </div>
+          </div>
+          <a href="#" class="bg-[#309CAC] text-white px-4 py-2 gap-2 rounded-md flex items-center">
+            <span>Download</span>
+            <span class="icon-[tabler--download]"></span>
+          </a>
+          <a href="#" class="text-[#309CAC]">Login</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="lg:hidden focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden lg:hidden bg-white shadow-md p-4">
+        <a href="#" class="block py-2">About</a>
+        <a href="#" class="block py-2">Features</a>
+        <a href="#" class="block py-2">Use Cases</a>
+        <a href="#" class="block py-2">For Business</a>
+        <a href="#" class="block py-2">Help Center</a>
+        <div class="py-2">
+          <button id="mobileLangBtn" class="flex items-center w-full text-left py-2">
+            <img src="./flag.svg" class="h-4 w-6 mr-2" /> Language ▾
+          </button>
+          <div id="mobileLangDropdown" class="hidden">
+            <a href="#" class="block px-4 py-2">🇬🇧 English</a>
+            <a href="#" class="block px-4 py-2">🇫🇷 French</a>
+            <a href="#" class="block px-4 py-2">🇩🇪 German</a>
+          </div>
+        </div>
+        <a href="#" class="block py-2 bg-blue-500 text-white text-center rounded-md">Download</a>
+        <a href="#" class="block py-2 text-blue-500 text-center">Login</a>
+      </div>
+    </nav>
+    <!-- navbar section end -->
+
+    <!-- hero section -->
+    <section
+      class="bg-cover flex justify-center items-center bg-center bg-no-repeat pt-32 pb-16 px-6 bg-[url('../assets/images/terms-and-conditions/terms-bg.png')]"
+    >
+      <div class="container text-white max-w-7xl">
+        <h2 class="text-4xl font-bold">Privacy Policy</h2>
+        <p class="mt-4">
+          By using Supertext you are giving us access to your personal information. In this Privacy
+          policy, we will explain what kind of data we collect, how we use this data and for what
+          purposes. We will also explain your rights regarding your personal data and how to
+          exercise them. Your use of Supertext is to be understood as your acceptance of the terms
+          in this Privacy policy. In addition, you accept that we use electronic means of
+          communication to send you information. It is important that you read and understand this
+          Privacy policy before using Supertext.
+        </p>
+      </div>
+    </section>
+    <!-- hero section End -->
+
+    <section class="bg-white py-12 px-6">
+      <div class="container max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900">1. Definitions</h2>
+        <p class="mt-6 text-gray-700">
+          The words below shall have the following meaning: The Service: The service provided by
+          Supertext under these Terms. The User: Persons who use the Service, i.e. everybody who
+          sends or receives a message through the Service. Operator: The Users mobile phone
+          operator.
+        </p>
+        <h2 class="text-3xl font-bold text-gray-900 mt-6">2. How the service works</h2>
+        <p class="mt-6 text-gray-700">
+          As a User you register a group with the Service and are provided a telephone number. Other
+          persons can be connected to this number and thereby become members in the group and Users.
+          Messages sent to the group number are automatically forwarded to the other members of the
+          group and, in some cases, together with a commercial message. Supertext does not charge
+          any fee sending messages to the Service. The only cost per message is the Operators rate
+          for sending a message to the groups phone number. The User is aware that other costs may
+          be charged if the User uses the Service outside Sweden. The cost for such usage depends on
+          the Users agreement with the Operator. Supertext is not party to the agreement between the
+          User and the Operator and does not accept responsibility for any cost which may be charged
+          by the Operator when the User uses the Service.
+        </p>
+        <h2 class="text-3xl font-bold text-gray-900 mt-6">3. Your responsibilities</h2>
+        <p class="mt-6 text-gray-700">
+          Please use the Service in a responsible and courteous manner. You as User are responsible
+          for the content of the messages you send through the Service. As usual, you are required
+          to comply with Swedish law. This means that messages containing threats, verbal assaults,
+          libel, slander, encouragement to commit crimes and other illegal messages may not be
+          spread through the Service. Abuse of the Service is absolutely forbidden, including
+          attempting to misuse the service, spread virus, use other Users login credentials or in
+          any other way negatively disturb other Users.
+        </p>
+        <h2 class="text-3xl font-bold text-gray-900 mt-6">4. No liability</h2>
+        <p class="mt-6">
+          Supertext is not to be regarded as any form of legal intermediary between the User and the
+          Operator. This means that Supertext assumes no liability for possible disputes between the
+          User and the Operator, for example regarding damage, faults or failed payments. Supertext
+          accepts no liability for the Users cost for SMS, MMS and telephone traffic as this is
+          solely a matter between the User and the Operator. Supertext assumes no responsibility for
+          the function and maintenance of the Service and the Service is provided 'As-Is'. The User
+          has no rights to claim compensation from Supertext, including, without limitation, demands
+          for compensation for economic or other damage due to circumstances connected to the
+          Service, such as faulty data, service interruption or banning from the Service under
+          Section 11 below. Supertext cannot scrutinize messages before they are published on the
+          Service and therefore assumes no responsibility for the content of the messages published
+          on the Service.
+        </p>
+        <h2 class="text-3xl font-bold text-gray-900 mt-6">5. Exceptional circumstances</h2>
+        <p class="mt-6">
+          Supertext shall have no responsibility in case of nonfullfillment of any obligation if the
+          nonfullfillment is due to exceptional circumstances. Exceptional circumstances include
+          actions or omissions of authorities, new or amended regulations, disease or other decrease
+          of work capacity, death, labour conflicts, blockage, fire, floods, loss or damage of data
+          or property of importance or major accidents.
+        </p>
+
+        <h2 class="text-3xl font-bold text-gray-900 mt-6">6. Marketing etc.</h2>
+        <p class="mt-6">
+          In order for Supertext to continue to develop and maintain the quality of the Service,
+          Supertext reserves the right to market its own and third party products within the
+          framework of the Service. Possible contacts between you and advertisers on the Service is
+          solely a matter between you and such advertiser. You are aware and accept that Supertext
+          cannot be held responsible for damage or loss of any kind caused by such relations or due
+          to the existence of such advertisers on the Service.
+        </p>
+
+        <h2 class="text-3xl font-bold text-gray-900 mt-6">
+          7. Copyright and intellectual property
+        </h2>
+        <p class="mt-6">
+          All intellectual property of the Service belongs to Supertext and/or third parties. This
+          includes for example software, trademarks, patterns, text and other IP rights available on
+          and in relation to the Service. No information except for the content made by Users on the
+          Service may be duplicated, copied, transferred, stored, sold, altered or used without
+          previous written consent by Supertext.
+        </p>
+
+        <h2 class="text-3xl font-bold text-gray-900 mt-6">8. Sanctions</h2>
+        <p class="mt-6">
+          Supertext has the right to, without stating any reason, ban or shut off Users who breach
+          Swedish law or in any other way do not fulfil these Terms. Supertext has the right to,
+          without stating any reason, remove published messages which may be considered offending or
+          unsuitable in relation to Supertexts business. In case of less severe breaches against
+          these terms, a warning is issued. In case of repeated or severe breaches against the terms
+          the User may be shut off immediately. If the information published by the User on the
+          Service may entail liability for Supertext, the User shall hold Supertext harmless or
+          compensate Supertext for the incurred damage. The User is aware and accepts that data and
+          information send through the Service may be scrutinized by Supertext and forwarded to
+          relevant authority in case of a criminal investigation and after a formal requirement of
+          such data information has been received by Supertext.
+        </p>
+
+        <h2 class="text-3xl font-bold text-gray-900 mt-6">9. Personal data</h2>
+        <p class="mt-6">
+          Supertext cares for your personal integrity. Supertext complies with the Personal Data Act
+          (Sw: personuppgiftslagen) and other laws and regulations to protect your integrity.
+          Information on the Users will be processed to enable Supertext to fulfil its obligations
+          under these Terms and for register care. Register care comprises requisition of
+          supplemental data from other databases such as SPAR.
+        </p>
+
+        <h2 class="text-3xl font-bold text-gray-900 mt-6">10. Termination</h2>
+        <p class="mt-6">
+          The parties may at any time, without any notice and without any requirement for
+          compensation, terminate the agreement. The User may terminate the agreement by
+          discontinuing use of the Service and deregistering at the Service, either online, or via a
+          mobile text message. Supertext may terminate the agreement by not making the Service
+          available or by banning a user who has breached the Terms.
+        </p>
+
+        <h2 class="text-3xl font-bold text-gray-900 mt-6">11. Applicable law - dispute</h2>
+        <p class="mt-6">
+          Any dispute arising out of or in connection with the Users usage of the Service shall be
+          settled by the Courts of Sweden with the District Court of Stockholm as first instance.
+          Swedish law shall be applied.
+        </p>
+
+        <h2 class="text-3xl font-bold text-gray-900 mt-6">12. Amendments</h2>
+        <p class="mt-6">
+          Supertext has a right to, without notice, amend these Terms of Service, either on its own
+          or as required due to laws and regulations. Users are therefore encouraged to consult
+          these Terms from time to time. The modified terms are published on Supertext.se and enter
+          into force as soon as they have been made available. By continuing to access or use the
+          Services after those revisions become effective, you agree to be bound by the revised
+          Terms. These Terms enter into force on January 1, 2011, and replace all previous Terms
+          regarding the Service.
+        </p>
+      </div>
+    </section>
+    <!-- telco partners slider -->
+    <section class="py-16 px-3 lg:px-16 xl:px-32 relative">
+      <h2 class="text-center text-4xl font-black mb-8">Telco partners</h2>
+      <div class="w-full flex gap-5 items-center flex-wrap justify-center 3xl:justify-between">
+        <div class="w-24">
+          <img
+            class="size-full object-cover"
+            src="../assets/images/telco-partners/c1.png"
+            alt="image"
+          />
+        </div>
+        <div class="w-10">
+          <img
+            class="size-full object-cover"
+            src="../assets/images/telco-partners/c2.png"
+            alt="image"
+          />
+        </div>
+        <div class="w-24">
+          <img
+            class="size-full object-cover"
+            src="../assets/images/telco-partners/c3.png"
+            alt="image"
+          />
+        </div>
+        <div class="w-24">
+          <img src="../assets/images/telco-partners/c4.png" alt="image" />
+        </div>
+        <div class="w-24">
+          <img
+            class="size-full object-cover"
+            src="../assets/images/telco-partners/c5.png"
+            alt="image"
+          />
+        </div>
+        <div class="w-24">
+          <img
+            class="size-full object-cover"
+            src="../assets/images/telco-partners/c6.png"
+            alt="image"
+          />
+        </div>
+        <div class="w-24">
+          <img
+            class="size-full object-cover"
+            src="../assets/images/telco-partners/c7.png"
+            alt="image"
+          />
+        </div>
+        <div class="w-24">
+          <img
+            class="size-full object-cover"
+            src="../assets/images/telco-partners/c8.png"
+            alt="image"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- telco partners slider end -->
+
+    <script type="module" src="/src/assets/js/main.ts"></script>
+  </body>
+</html>
