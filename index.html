@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,235 @@
     <title>Super Text</title>
   </head>
   <body>
-    <h1>Super Text</h1>
+    <!-- navbar section -->
+    <nav class="bg-white shadow-md w-full fixed top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <img src="./src/assets/images/header/logo.png" alt="Supertext Logo" class="h-8" />
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex space-x-6 text-gray-700">
+          <a href="#" class="hover:text-red-500">About</a>
+          <a href="#" class="hover:text-red-500">Features</a>
+          <a href="#" class="hover:text-red-500">Use Cases</a>
+          <a href="#" class="hover:text-red-500">For Business</a>
+          <a href="#" class="hover:text-red-500">Help Center</a>
+        </div>
+
+        <!-- Language & Buttons -->
+        <div class="hidden md:flex items-center space-x-4">
+          <div class="relative">
+            <button id="langBtn" class="flex items-center px-3 py-2 gap-1 rounded-md bg-[#F6FAF8]">
+              <img
+                src="./src/assets/images/header/language-flag.svg"
+                alt="Lang"
+                class="h-4 w-6 mr-2"
+              />
+              Language
+              <span class="icon-[tabler--chevron-down]"></span>
+            </button>
+            <div id="langDropdown" class="hidden absolute bg-white shadow-md rounded-md w-36 mt-2">
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">🇬🇧 English</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">🇫🇷 French</a>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100">🇩🇪 German</a>
+            </div>
+          </div>
+          <a href="#" class="bg-[#309CAC] text-white px-4 py-2 gap-2 rounded-md flex items-center">
+            <span>Download</span>
+            <span class="icon-[tabler--download]"></span>
+          </a>
+          <a href="#" class="text-[#309CAC]">Login</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="lg:hidden focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden lg:hidden bg-white shadow-md p-4">
+        <a href="#" class="block py-2">About</a>
+        <a href="#" class="block py-2">Features</a>
+        <a href="#" class="block py-2">Use Cases</a>
+        <a href="#" class="block py-2">For Business</a>
+        <a href="#" class="block py-2">Help Center</a>
+        <div class="py-2">
+          <button id="mobileLangBtn" class="flex items-center w-full text-left py-2">
+            <img src="./flag.svg" class="h-4 w-6 mr-2" /> Language ▾
+          </button>
+          <div id="mobileLangDropdown" class="hidden">
+            <a href="#" class="block px-4 py-2">🇬🇧 English</a>
+            <a href="#" class="block px-4 py-2">🇫🇷 French</a>
+            <a href="#" class="block px-4 py-2">🇩🇪 German</a>
+          </div>
+        </div>
+        <a href="#" class="block py-2 bg-blue-500 text-white text-center rounded-md">Download</a>
+        <a href="#" class="block py-2 text-blue-500 text-center">Login</a>
+      </div>
+    </nav>
+    <!-- navbar section end -->
+
+    <!-- hero section -->
+    <section
+      class="bg-cover bg-no-repeat py-16 mt-16 flex items-end bg-[url('./src/assets/images/home/desktop_hero_banner.png')]"
+    >
+      <div class="w-full 5xl:w-1/2 pr-0 5xl:pr-16">
+        <div
+          class="bg-[#000000ad] bg-opacity-70 text-white 5xl:rounded-r-2xl px-2 py-10 3xl:px-10 8xl:pl-30"
+        >
+          <h1 class="text-4xl font-extrabold mb-6">With you, it’s more exciting!</h1>
+          <p class="mb-6">
+            Supertext makes online chats and offline SMS seamlessly unite, enabling group
+            conversations with family, friends, and colleagues, regardless of internet availability
+            or phone model.
+          </p>
+          <ul class="mb-8 space-y-2">
+            <li>&#8226; Free SMS</li>
+            <li>&#8226; Reach everyone</li>
+            <li>&#8226; Simple, private, and fun</li>
+          </ul>
+          <div class="flex space-x-4 mb-8">
+            <a href="https://play.google.com/store/apps/details?id=se.stxt.android">
+              <img src="./src/assets/images/home/google-play-store.svg" class="w-48" />
+            </a>
+            <a href="https://apps.apple.com/se/app/supertext-messenger/id866215398">
+              <img src="./src/assets/images/home/apple-store-img.svg" class="w-44" />
+            </a>
+          </div>
+          <div
+            class="flex flex-col xl:flex-row 5xl:flex-col 6xl:flex-row items-center justify-between"
+          >
+            <div class="flex space-x-2">
+              <img
+                src="./src/assets/images/home/user-01.png"
+                class="size-16 z-30 relative rounded-full"
+              />
+              <img
+                src="./src/assets/images/home/user-02.png"
+                class="size-16 -ml-8 z-20 relative rounded-full"
+              />
+              <img
+                src="./src/assets/images/home/user-03.png"
+                class="size-16 -ml-8 z-10 relative rounded-full"
+              />
+            </div>
+            <div class="flex mt-5 gap-5">
+              <div class="border-r-2 pr-12 6xl:pr-3 7xl:pr-12 border-white">
+                <div class="text-3xl font-bold mb-2">1M +</div>
+                <div class="text-[#969393]">Downloads</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold mb-2">4.4/5</div>
+                <div class="text-yellow-400 text-lg">
+                  <span class="icon-[tabler--jewish-star-filled]"></span>
+                  <span class="icon-[tabler--jewish-star-filled]"></span>
+                  <span class="icon-[tabler--jewish-star-filled]"></span>
+                  <span class="icon-[tabler--jewish-star-filled]"></span>
+                  <span class="icon-[tabler--star-half-filled]"></span>
+                  <span class="text-[#969393]"> Rating</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-1/2 items-end hidden 5xl:flex">
+        <img src="./src/assets/images/home/sl1.png" class="w-60 h-28" />
+        <img src="./src/assets/images/home/sl2.png" class="w-60 h-28 ml-10 mb-16" />
+      </div>
+    </section>
+    <!-- hero section End -->
+
+    <!-- telco partners slider -->
+    <section class="pt-16 pb-24 md:py-16 px-3 lg:px-16 xl:px-32 relative">
+      <h2 class="text-center text-gray-500 text-4xl font-black mb-8">Telco partners</h2>
+      <div id="telco_partner" class="swiper w-full h-24 static!">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="bg-[#dbeae5] h-full flex justify-center items-center rounded-xl">
+              <img src="./src/assets/images/telco-partners/c1.png" alt="image" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-[#dbeae5] h-full flex justify-center items-center rounded-xl">
+              <img src="./src/assets/images/telco-partners/c2.png" alt="image" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-[#dbeae5] h-full flex justify-center items-center rounded-xl">
+              <img src="./src/assets/images/telco-partners/c3.png" alt="image" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-[#dbeae5] h-full flex justify-center items-center rounded-xl">
+              <img src="./src/assets/images/telco-partners/c4.png" alt="image" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-[#dbeae5] h-full flex justify-center items-center rounded-xl">
+              <img src="./src/assets/images/telco-partners/c5.png" alt="image" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-[#dbeae5] h-full flex justify-center items-center rounded-xl">
+              <img src="./src/assets/images/telco-partners/c6.png" alt="image" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-[#dbeae5] h-full flex justify-center items-center rounded-xl">
+              <img src="./src/assets/images/telco-partners/c7.png" alt="image" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="bg-[#dbeae5] h-full flex justify-center items-center rounded-xl">
+              <img src="./src/assets/images/telco-partners/c8.png" alt="image" />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="telco_partner_button_prev absolute bottom-0 left-24 sm:left-44 md:top-[60%] md:left-12 -translate-y-1/2 w-12 h-12 bg-[#309cac] rounded-full flex items-center justify-center shadow-lg cursor-pointer text-white"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 12h14M5 12l6 6m-6-6l6-6"
+            />
+          </svg>
+        </div>
+        <div
+          class="telco_partner_button_next absolute bottom-0 right-24 sm:right-44 md:top-[60%] md:right-12 -translate-y-1/2 w-12 h-12 bg-[#309cac] rounded-full flex items-center justify-center shadow-md cursor-pointer text-white"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 12h14m-6 6l6-6m-6-6l6 6"
+            />
+          </svg>
+        </div>
+      </div>
+    </section>
+    <!-- telco partners slider end -->
+
     <script type="module" src="/src/assets/js/main.ts"></script>
   </body>
 </html>
