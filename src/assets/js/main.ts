@@ -37,7 +37,6 @@ new Swiper('#feature_slider', {
 });
 
 //  testimonials slider
-
 new Swiper('#testimonial_slider', {
   loop: true,
   navigation: {
@@ -47,5 +46,20 @@ new Swiper('#testimonial_slider', {
   breakpoints: {
     672: { slidesPerView: 2, spaceBetween: 10 },
     896: { slidesPerView: 2, spaceBetween: 20 }
+  }
+});
+
+//  supertext slider
+new Swiper('#supertext_slider', {
+  loop: true,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '#supertext_btn_next',
+    prevEl: '#supertext_btn_prev'
+  },
+  breakpoints: {
+    672: { slidesPerView: 2, spaceBetween: 10 },
+    896: { slidesPerView: 2, spaceBetween: 20 },
+    1024: { slidesPerView: 3, spaceBetween: 20 }
   }
 });
