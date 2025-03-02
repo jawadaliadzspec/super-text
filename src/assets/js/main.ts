@@ -1,18 +1,48 @@
 import '../css/main.css';
 import Swiper from 'swiper/bundle';
 
-document.getElementById('menuBtn')!.addEventListener('click', function () {
-  document.getElementById('mobileMenu')!.classList.toggle('hidden');
+// mbile toggle menu
+const menuBtn = document.getElementById('menuBtn')!;
+const mobileMenu = document.getElementById('mobile_menu')!;
+
+menuBtn.addEventListener('click', () => {
+  const isHidden = mobileMenu.classList.contains('opacity-0');
+
+  if (isHidden) {
+    mobileMenu.classList.remove('opacity-0', '-translate-y-10', 'pointer-events-none');
+    mobileMenu.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+  } else {
+    mobileMenu.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+    mobileMenu.classList.add('opacity-0', '-translate-y-10', 'pointer-events-none');
+  }
 });
 
-document.getElementById('langBtn')!.addEventListener('click', function () {
-  document.getElementById('langDropdown')!.classList.toggle('hidden');
-});
+// handle dropdowns
+window.onload = function () {
+  function toggleDropdown(id: string) {
+    const dropdown = document.getElementById(id);
+    const isMobile = window.innerWidth <= 1152;
+    const allDropdowns = document.querySelectorAll('.dropdown-menu');
+    const allMobileDropdowns = document.querySelectorAll('.dropdown-mobile');
 
-document.getElementById('mobileLangBtn')!.addEventListener('click', function () {
-  document.getElementById('mobileLangDropdown')!.classList.toggle('hidden');
-});
+    if (!dropdown) return;
 
+    if (isMobile) {
+      allMobileDropdowns.forEach((el) => {
+        if (el !== dropdown) el.classList.remove('active');
+      });
+    } else {
+      allDropdowns.forEach((el) => {
+        if (el !== dropdown) el.classList.remove('active');
+      });
+    }
+
+    dropdown!.classList.toggle('active');
+  }
+  window.toggleDropdown = toggleDropdown;
+};
+
+// preloader
 window.addEventListener('load', () => {
   setTimeout(() => {
     document.getElementById('preloader')!.classList.add('opacity-0');

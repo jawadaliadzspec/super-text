@@ -22,79 +22,185 @@
 
     <!-- navbar section -->
     <nav id="header" class="bg-white shadow-md w-full fixed top-0 z-50">
-      <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-        <!-- Logo -->
+      <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
         <div class="flex items-center gap-2">
-          <img src="./src/assets/images/header/logo.png" alt="Supertext Logo" class="h-8" />
+          <a href="index.html">
+            <img src="./src/assets/images/header/logo.png" alt="Supertext Logo" class="h-8" />
+          </a>
         </div>
 
-        <!-- Desktop Menu -->
-        <div class="hidden lg:flex space-x-6 text-gray-700">
-          <a href="#" class="hover:text-red-500">About</a>
-          <a href="#" class="hover:text-red-500">Features</a>
-          <a href="#" class="hover:text-red-500">Use Cases</a>
-          <a href="#" class="hover:text-red-500">For Business</a>
-          <a href="#" class="hover:text-red-500">Help Center</a>
-        </div>
-
-        <!-- Language & Buttons -->
-        <div class="hidden md:flex items-center space-x-4">
+        <div class="hidden 6xl:flex space-x-6 text-gray-700">
           <div class="relative">
-            <button id="langBtn" class="flex items-center px-3 py-2 gap-1 rounded-md bg-[#F6FAF8]">
-              <img
-                src="./src/assets/images/header/language-flag.svg"
-                alt="Lang"
-                class="h-4 w-6 mr-2"
-              />
-              Language
-              <span class="icon-[tabler--chevron-down]"></span>
+            <button
+              onclick="toggleDropdown('aboutDropdown')"
+              class="hover:text-red-500 flex items-center gap-1 cursor-pointer"
+            >
+              About <span class="icon-[tabler--chevron-down]"></span>
             </button>
-            <div id="langDropdown" class="hidden absolute bg-white shadow-md rounded-md w-36 mt-2">
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100">🇬🇧 English</a>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100">🇫🇷 French</a>
-              <a href="#" class="block px-4 py-2 hover:bg-gray-100">🇩🇪 German</a>
+            <div id="aboutDropdown" class="dropdown-menu">
+              <a href="#" class="dropdown-item px-4">Company</a>
+              <a href="#" class="dropdown-item">Team</a>
+              <a href="#" class="dropdown-item">Careers</a>
+              <a href="#" class="dropdown-item">Press</a>
             </div>
           </div>
-          <a href="#" class="bg-[#309CAC] text-white px-4 py-2 gap-2 rounded-md flex items-center">
-            <span>Download</span>
+          <div class="relative">
+            <button
+              onclick="toggleDropdown('featuresDropdown')"
+              class="hover:text-red-500 flex items-center gap-1 cursor-pointer"
+            >
+              Features <span class="icon-[tabler--chevron-down]"></span>
+            </button>
+            <div id="featuresDropdown" class="dropdown-menu">
+              <a href="#" class="dropdown-item">Messaging</a>
+              <a href="#" class="dropdown-item">Integrations</a>
+              <a href="#" class="dropdown-item">Security</a>
+              <a href="#" class="dropdown-item">AI Tools</a>
+            </div>
+          </div>
+          <a href="#" class="hover:text-red-500">Use Cases</a>
+          <div class="relative">
+            <button
+              onclick="toggleDropdown('businessDropdown')"
+              class="hover:text-red-500 flex items-center gap-1 cursor-pointer"
+            >
+              For Business <span class="icon-[tabler--chevron-down]"></span>
+            </button>
+            <div id="businessDropdown" class="dropdown-menu">
+              <a href="#" class="dropdown-item">Advertise with Us</a>
+            </div>
+          </div>
+          <div class="relative">
+            <button
+              onclick="toggleDropdown('helpDropdown')"
+              class="hover:text-red-500 flex items-center gap-1 cursor-pointer"
+            >
+              Help Center <span class="icon-[tabler--chevron-down]"></span>
+            </button>
+            <div id="helpDropdown" class="dropdown-menu">
+              <a href="#" class="dropdown-item">FAQs</a>
+              <a href="#" class="dropdown-item">ToS, ToC</a>
+              <a href="#" class="dropdown-item">SMS Commands</a>
+              <a href="#" class="dropdown-item">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <!-- navbar buttons -->
+        <div class="flex items-center gap-3">
+          <div class="relative">
+            <button
+              onclick="toggleDropdown('langDropdown')"
+              class="flex items-center px-2 py-2 gap-1 rounded-md bg-[#F6FAF8] cursor-pointer"
+            >
+              <img
+                class="size-6 lg:h-4 lg:w-6 lg:mr-2"
+                src="./src/assets/images/header/language-flag.svg"
+                alt="language flag"
+              />
+              <span class="hidden lg:flex"> Language </span>
+              <span class="icon-[tabler--chevron-down]"></span>
+            </button>
+            <div id="langDropdown" class="dropdown-menu">
+              <a href="#" class="dropdown-item"> 🇬🇧 English </a>
+              <a href="#" class="dropdown-item"> 🇫🇷 French </a>
+              <a href="#" class="dropdown-item">🇩🇪 German</a>
+            </div>
+          </div>
+          <a
+            href="#"
+            class="p-2.5 lg:px-4 lg:py-2 gap-2 rounded-full lg:rounded-md flex items-center bg-[#309CAC] text-white"
+          >
+            <span class="hidden xl:flex">Download</span>
             <span class="icon-[tabler--download]"></span>
           </a>
           <a href="#" class="text-[#309CAC]">Login</a>
-        </div>
 
-        <!-- Mobile Menu Button -->
-        <button id="menuBtn" class="lg:hidden focus:outline-none">
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
+          <button
+            id="menuBtn"
+            class="6xl:hidden focus:outline-none text-white bg-red-500 rounded-full p-2"
           >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
+            <svg
+              class="size-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
       </div>
 
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="hidden lg:hidden bg-white shadow-md p-4">
-        <a href="#" class="block py-2">About</a>
-        <a href="#" class="block py-2">Features</a>
-        <a href="#" class="block py-2">Use Cases</a>
-        <a href="#" class="block py-2">For Business</a>
-        <a href="#" class="block py-2">Help Center</a>
-        <div class="py-2">
-          <button id="mobileLangBtn" class="flex items-center w-full text-left py-2">
-            <img src="./flag.svg" class="h-4 w-6 mr-2" /> Language ▾
+      <!-- mobile menu -->
+      <div
+        id="mobile_menu"
+        class="6xl:hidden bg-[#F6FAF8] p-5 fixed inset-x-0 top-24 transform transition-all duration-300 ease-in-out opacity-0 -translate-y-10 pointer-events-none"
+      >
+        <div class="relative py-2 border-b border-gray-200">
+          <button
+            onclick="toggleDropdown('mobileAbout')"
+            class="hover:text-red-500 flex items-center justify-between w-full cursor-pointer"
+          >
+            <span>About</span>
+            <span class="icon-[tabler--chevron-down]"></span>
           </button>
-          <div id="mobileLangDropdown" class="hidden">
-            <a href="#" class="block px-4 py-2">🇬🇧 English</a>
-            <a href="#" class="block px-4 py-2">🇫🇷 French</a>
-            <a href="#" class="block px-4 py-2">🇩🇪 German</a>
+          <div id="mobileAbout" class="dropdown-mobile">
+            <a href="#" class="dropdown-ite-mob">Company</a>
+            <a href="#" class="dropdown-ite-mob">Team</a>
+            <a href="#" class="dropdown-ite-mob">Careers</a>
+            <a href="#" class="dropdown-ite-mob">Press</a>
           </div>
         </div>
-        <a href="#" class="block py-2 bg-blue-500 text-white text-center rounded-md">Download</a>
-        <a href="#" class="block py-2 text-blue-500 text-center">Login</a>
+        <div class="relative py-2 border-b border-gray-200">
+          <button
+            onclick="toggleDropdown('mobileFeatures')"
+            class="hover:text-red-500 flex items-center justify-between w-full cursor-pointer"
+          >
+            <span>Features</span>
+            <span class="icon-[tabler--chevron-down]"></span>
+          </button>
+          <div id="mobileFeatures" class="dropdown-mobile">
+            <a href="#" class="dropdown-ite-mob">Messaging</a>
+            <a href="#" class="dropdown-ite-mob">Integrations</a>
+            <a href="#" class="dropdown-ite-mob">Security</a>
+            <a href="#" class="dropdown-ite-mob">AI Tools</a>
+          </div>
+        </div>
+        <a href="#" class="block w-full hover:text-red-200 py-2 border-b border-gray-200">
+          Use Cases
+        </a>
+        <div class="relative py-2 border-b border-gray-200">
+          <button
+            onclick="toggleDropdown('mobileBusiness')"
+            class="hover:text-red-500 flex items-center justify-between w-full cursor-pointer"
+          >
+            <span>For Business </span>
+            <span class="icon-[tabler--chevron-down]"></span>
+          </button>
+          <div id="mobileBusiness" class="dropdown-mobile">
+            <a href="#" class="dropdown-ite-mob">Advertise with Us</a>
+          </div>
+        </div>
+        <div class="relative py-2 border-b border-gray-200">
+          <button
+            onclick="toggleDropdown('mobilehelp')"
+            class="hover:text-red-500 flex items-center justify-between w-full cursor-pointer"
+          >
+            <span>Help Center </span>
+            <span class="icon-[tabler--chevron-down]"></span>
+          </button>
+          <div id="mobilehelp" class="dropdown-mobile">
+            <a href="#" class="dropdown-ite-mob">FAQs</a>
+            <a href="#" class="dropdown-ite-mob">ToS, ToC</a>
+            <a href="#" class="dropdown-ite-mob">SMS Commands</a>
+            <a href="#" class="dropdown-ite-mob">Contact Us</a>
+          </div>
+        </div>
       </div>
     </nav>
     <!-- navbar section end -->
@@ -683,16 +789,16 @@
           </a>
           <div class="flex-1">
             <ul class="flex flex-col 2xl:flex-row justify-between text-gray-700 text-sm gap-4">
-              <li><a href="faqs.html" class="hover:text-blue-600">FAQ's</a></li>
+              <li><a href="faqs.html" class="hover:text-red-500">FAQ's</a></li>
               <li>
-                <a href="terms-and-conditions.html" class="hover:text-blue-600">
+                <a href="terms-and-conditions.html" class="hover:text-red-500">
                   Terms and Conditions
                 </a>
               </li>
-              <li><a href="privacy-policy.html" class="hover:text-blue-600">Privacy Policy</a></li>
-              <li><a href="contact-us.html" class="hover:text-blue-600">Support</a></li>
+              <li><a href="privacy-policy.html" class="hover:text-red-500">Privacy Policy</a></li>
+              <li><a href="contact-us.html" class="hover:text-red-500">Support</a></li>
               <li>
-                <a href="advertise-with-us.html" class="hover:text-blue-600">Advertise With Us?</a>
+                <a href="advertise-with-us.html" class="hover:text-red-500">Advertise With Us?</a>
               </li>
             </ul>
           </div>
