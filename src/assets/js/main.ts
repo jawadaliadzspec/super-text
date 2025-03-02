@@ -19,8 +19,8 @@ window.addEventListener('load', () => {
     setTimeout(() => {
       document.getElementById('preloader')!.style.display = 'none';
       document.getElementById('content')!.classList.remove('opacity-0');
-    }, 500);
-  }, 5000);
+    }, 100);
+  }, 1000);
 });
 
 //  feature slider
