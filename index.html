@@ -7,8 +7,21 @@
     <title>Super Text</title>
   </head>
   <body>
+    <!-- Preloader -->
+    <div
+      id="preloader"
+      class="fixed inset-0 bg-white flex items-center justify-center z-50 transition-opacity duration-500"
+    >
+      <div class="flex flex-col items-center">
+        <div
+          class="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"
+        ></div>
+        <p class="mt-4 text-blue-500 text-lg font-semibold">Loading...</p>
+      </div>
+    </div>
+
     <!-- navbar section -->
-    <nav class="bg-white shadow-md w-full fixed top-0 z-50">
+    <nav id="header" class="bg-white shadow-md w-full fixed top-0 z-50">
       <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
         <!-- Logo -->
         <div class="flex items-center gap-2">
@@ -86,574 +99,651 @@
     </nav>
     <!-- navbar section end -->
 
-    <!-- hero section -->
-    <section
-      class="bg-cover bg-no-repeat py-16 mt-16 flex items-end bg-[url('./src/assets/images/home/desktop_hero_banner.png')]"
-    >
-      <div class="w-full 5xl:w-1/2 pr-0 5xl:pr-16">
-        <div
-          class="bg-[#000000ad] bg-opacity-70 text-white 5xl:rounded-r-2xl px-2 py-10 3xl:px-10 8xl:pl-30"
-        >
-          <h1 class="text-4xl font-extrabold mb-6">With you, it’s more exciting!</h1>
-          <p class="mb-6">
-            Supertext makes online chats and offline SMS seamlessly unite, enabling group
-            conversations with family, friends, and colleagues, regardless of internet availability
-            or phone model.
-          </p>
-          <ul class="mb-8 space-y-2">
-            <li>&#8226; Free SMS</li>
-            <li>&#8226; Reach everyone</li>
-            <li>&#8226; Simple, private, and fun</li>
-          </ul>
-          <div class="flex space-x-4 mb-8">
-            <a href="https://play.google.com/store/apps/details?id=se.stxt.android">
-              <img src="./src/assets/images/home/google-play-store.svg" class="w-48" />
-            </a>
-            <a href="https://apps.apple.com/se/app/supertext-messenger/id866215398">
-              <img src="./src/assets/images/home/apple-store-img.svg" class="w-44" />
-            </a>
-          </div>
-          <div class="flex items-center gap-3">
-            <div class="flex gap-3 w-40">
-              <img
-                src="./src/assets/images/home/user-01.png"
-                class="size-10 sm:size-15 z-30 relative rounded-full"
-              />
-              <img
-                src="./src/assets/images/home/user-02.png"
-                class="size-10 sm:size-15 -ml-8 z-20 relative rounded-full"
-              />
-              <img
-                src="./src/assets/images/home/user-03.png"
-                class="size-10 sm:size-15 -ml-8 z-10 relative rounded-full"
-              />
-            </div>
-            <div class="flex shrink">
-              <div class="border-r-2 pr-8 border-white">
-                <div class="text-xl font-bold mb-2">1M +</div>
-                <div class="text-[#969393] text-sm">Downloads</div>
-              </div>
-              <div class="pl-8">
-                <div class="text-xl font-bold mb-2">4.4/5</div>
-                <div class="text-yellow-400 text-sm">
-                  <span class="icon-[tabler--jewish-star-filled]"></span>
-                  <span class="icon-[tabler--jewish-star-filled]"></span>
-                  <span class="icon-[tabler--jewish-star-filled]"></span>
-                  <span class="icon-[tabler--jewish-star-filled]"></span>
-                  <span class="icon-[tabler--star-half-filled]"></span>
-                  <span class="text-[#969393]"> Rating</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="w-1/2 items-end hidden 5xl:flex">
-        <img src="./src/assets/images/home/sl1.png" class="w-60 h-28" />
-        <img src="./src/assets/images/home/sl2.png" class="w-60 h-28 ml-10 mb-16" />
-      </div>
-    </section>
-    <!-- hero section End -->
-
-    <!-- telco partners slider -->
-    <section class="py-16 px-3 lg:px-16 xl:px-32 relative">
-      <h2 class="text-center text-gray-500 text-4xl font-black mb-8">Telco partners</h2>
-      <div class="w-full flex gap-5 items-center flex-wrap justify-center 3xl:justify-between">
-        <div class="w-24">
-          <img
-            class="size-full object-cover"
-            src="./src/assets/images/telco-partners/c1.png"
-            alt="image"
-          />
-        </div>
-        <div class="w-10">
-          <img
-            class="size-full object-cover"
-            src="./src/assets/images/telco-partners/c2.png"
-            alt="image"
-          />
-        </div>
-        <div class="w-24">
-          <img
-            class="size-full object-cover"
-            src="./src/assets/images/telco-partners/c3.png"
-            alt="image"
-          />
-        </div>
-        <div class="w-24">
-          <img src="./src/assets/images/telco-partners/c4.png" alt="image" />
-        </div>
-        <div class="w-24">
-          <img
-            class="size-full object-cover"
-            src="./src/assets/images/telco-partners/c5.png"
-            alt="image"
-          />
-        </div>
-        <div class="w-24">
-          <img
-            class="size-full object-cover"
-            src="./src/assets/images/telco-partners/c6.png"
-            alt="image"
-          />
-        </div>
-        <div class="w-24">
-          <img
-            class="size-full object-cover"
-            src="./src/assets/images/telco-partners/c7.png"
-            alt="image"
-          />
-        </div>
-        <div class="w-24">
-          <img
-            class="size-full object-cover"
-            src="./src/assets/images/telco-partners/c8.png"
-            alt="image"
-          />
-        </div>
-      </div>
-    </section>
-    <!-- telco partners slider end -->
-
-    <!-- about section  -->
-    <section
-      class="bg-[#F6FAF8] py-14 px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-14 3xl:px-16 4xl:px-20"
-    >
-      <div class="flex flex-col justify-center items-center gap-20 3xl:flex-row">
-        <div class="mb-10 w-full 3xl:w-1/2">
-          <h1 class="text-3xl font-black text-[#535C63] mb-5">No data? No internet? No problem!</h1>
-          <p>
-            Picture this: you're chatting with your family, colleagues or friends and some are
-            online using our app, while others are offline, sticking to good old SMS. The twist? Our
-            platform merges all messages into one thread, making group chats possible even when
-            people are offline.
-          </p>
-          <div class="mt-12">
-            <a href="" class="bg-[#309CAC] text-white px-6 py-4 rounded-lg"> More Info</a>
-          </div>
-        </div>
-
-        <div class="w-full 3xl:w-1/2">
-          <img class="" src="./src/assets/images/home/about-us.png" />
-        </div>
-      </div>
-    </section>
-    <!-- about section end -->
-
-    <!-- communities section -->
-    <section>
-      <div class="flex flex-col justify-center items-center gap-5 4xl:gap-10 4xl:flex-row">
-        <div class="w-full 4xl:w-1/2 p-5 4xl:p-0 order-2 4xl:order-1">
-          <img class="w-full" src="./src/assets/images/home/communities.png" alt="image" />
-        </div>
-
-        <div class="px-5 4xl:px-15 py-5 4xl:mb-10 w-full 4xl:w-1/2 4xl:order-2">
-          <h1 class="text-3xl font-black mb-5">
-            We love<br />
-            communities
-          </h1>
-          <p>
-            Empower your community with Supertext. We have designed a space where everyone can be
-            seen, heard and valued. Connect and grow with others who share your interests, and
-            achieve more together! It's easy to create your own community or to join an existing
-            one.
-          </p>
-          <div class="mt-12">
-            <a href="" class="bg-[#309CAC] text-white px-6 py-4 rounded-lg"> More Info </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end communities section -->
-
-    <!-- features for a better experience slider -->
-    <section class="relative pt-10 pb-24 bg-[url(./src/assets/images/home/feature-slider-bg.png)]">
-      <h2 class="text-3xl font-black text-[#fff] mb-8 text-center">
-        Features for a better experience
-      </h2>
-      <div class="flex items-center gap-1 xl:gap-5 px-1 5xl:px-4">
-        <div
-          id="fs_btn_prev"
-          class="absolute bottom-6 left-[35%] lg:left-[40%] 2xl:static bg-white text-red-500 flex justify-center items-center p-3 rounded-full"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 12h14M5 12l6 6m-6-6l6-6"
-            />
-          </svg>
-        </div>
-        <div id="feature_slider" class="swiper static! w-full h-40 2xs:h-40 md:h-30 6xl:h-40">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide h-full">
-              <div class="p-2 7xl:p-6 flex gap-1 6xl:gap-2.5 bg-white rounded-3xl h-full">
-                <div class="w-[20%]">
-                  <img src="./src/assets/images/home/feature-slide-01.png" class="h-8 2xl:h-14" />
-                </div>
-                <div class="w-[80%]">
-                  <h5 class="text-lg 6xl:text-xl text-[#535c63] font-black">Mention</h5>
-                  <p class="text-sm 6xl:text-lg text-[#535c63]">
-                    Draw attention with our mention feature. Just add '@' before a name in your
-                    message.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide h-full">
-              <div class="p-2 7xl:p-6 flex gap-1 6xl:gap-2.5 bg-white rounded-3xl h-full">
-                <div class="w-[20%]">
-                  <img src="./src/assets/images/home/feature-slide-02.png" class="h-8 2xl:h-14" />
-                </div>
-                <div class="w-[80%]">
-                  <h5 class="text-xl 6xl:text-xl text-[#535c63] font-black">React</h5>
-                  <p class="text-sm 6xl:text-lg text-[#535c63]">
-                    Share your feelings by reacting with emojis instead of a text message.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide h-full">
-              <div class="p-2 7xl:p-6 flex gap-1 6xl:gap-2.5 bg-white rounded-3xl h-full">
-                <div class="w-[20%]">
-                  <img src="./src/assets/images/home/feature-slide-03.png" class="h-8 2xl:h-14" />
-                </div>
-                <div class="w-[80%]">
-                  <h5 class="text-xl 6xl:text-xl text-[#535c63] font-black">Stickers</h5>
-                  <p class="text-sm 6xl:text-lg text-[#535c63]">
-                    Express yourself with custom stickers from our handpicked illustrators.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide h-full">
-              <div class="p-2 7xl:p-6 flex gap-1 6xl:gap-2.5 bg-white rounded-3xl h-full">
-                <div class="w-[20%]">
-                  <img src="./src/assets/images/home/feature-slide-04.png" class="h-8 2xl:h-14" />
-                </div>
-                <div class="w-[80%]">
-                  <h5 class="text-xl 6xl:text-xl text-[#535c63] font-black">Pin Message</h5>
-                  <p class="text-sm 6xl:text-lg text-[#535c63]">
-                    Ensure important messages are not lost in the conversation flow.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide h-full">
-              <div class="p-2 7xl:p-6 flex gap-1 6xl:gap-2.5 bg-white rounded-3xl h-full">
-                <div class="w-[20%]">
-                  <img src="./src/assets/images/home/feature-slide-05.png" class="h-8 2xl:h-14" />
-                </div>
-                <div class="w-[80%]">
-                  <h5 class="text-xl 6xl:text-xl text-[#535c63] font-black">Stories</h5>
-                  <p class="text-sm 6xl:text-lg text-[#535c63]">
-                    Share your day with stories. Post videos, photos, or text that vanish after 24
-                    hours.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide h-full">
-              <div class="p-2 7xl:p-6 flex gap-1 6xl:gap-2.5 bg-white rounded-3xl h-full">
-                <div class="w-[20%]">
-                  <img src="./src/assets/images/home/feature-slide-06.png" class="h-8 2xl:h-14" />
-                </div>
-                <div class="w-[80%]">
-                  <h5 class="text-xl 6xl:text-xl text-[#535c63] font-black">Share Files</h5>
-                  <p class="text-sm 6xl:text-lg text-[#535c63]">
-                    Share files, photos, videos, voice messages with colleagues or friends
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="feature_slider_pagination"></div>
-        </div>
-        <div
-          id="fs_btn_next"
-          class="absolute bottom-6 right-[35%] lg:right-[40%] 2xl:static bg-white text-red-500 flex justify-center items-center p-3 rounded-full"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 12h14m-6 6l6-6m-6-6l6 6"
-            />
-          </svg>
-        </div>
-      </div>
-    </section>
-    <!--end features for a better experience slider -->
-
-    <!-- testimonials slider -->
-    <section class="py-16 relative px-1 6xl:px-32">
-      <h2 class="text-gray-600 text-center text-3xl font-bold mb-16">What do our users say?</h2>
-      <div class="flex items-center gap-1 xl:gap-5 px-1 5xl:px-4">
-        <div
-          id="testimonial_btn_prev"
-          class="bg-red-500 text-white flex justify-center items-center p-3 rounded-full"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+    <main id="content" class="opacity-0 transition-opacity duration-500">
+      <!-- hero section -->
+      <section
+        class="bg-cover bg-no-repeat py-16 mt-16 flex items-end bg-[url('./src/assets/images/home/desktop_hero_banner.png')]"
+      >
+        <div class="w-full 5xl:w-1/2 pr-0 5xl:pr-16">
+          <div
+            class="bg-[#000000ad] bg-opacity-70 text-white 5xl:rounded-r-2xl px-2 py-10 3xl:px-10 8xl:pl-30"
           >
-            <path d="M5 12h14M5 12l6 6m-6-6l6-6" />
-          </svg>
-        </div>
-        <div id="testimonial_slider" class="swiper static! size-full">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div
-                class="p-4 6xl:p-16 border border-red-500 rounded-lg text-center shadow-lg relative"
-              >
-                <h2 class="text-gray-600 text-2xl font-bold">
-                  <q>Connecting with home town</q>
-                </h2>
-                <p class="text-gray-600">
-                  <q
-                    >I use Supertext to chat with my parents in hometown, they have no internet
-                    connection. Only Supertext can send app message through SMS. Thank you
-                    Supertext!</q
-                  >
-                </p>
-                <div
-                  class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 rotate-45 w-5 h-5 bg-white border-b border-r border-red-500"
-                ></div>
-              </div>
-              <div class="flex gap-6 justify-center mt-8">
-                <img
-                  src="./src/assets/images/home/testimonial_profile.png"
-                  class="w-16 h-16 rounded-full"
-                />
-                <div>
-                  <h5 class="font-semibold">Alfian</h5>
-                  <p class="text-gray-500">Student, East Nusa</p>
-                </div>
-              </div>
+            <h1 class="text-4xl font-extrabold mb-6">With you, it’s more exciting!</h1>
+            <p class="mb-6">
+              Supertext makes online chats and offline SMS seamlessly unite, enabling group
+              conversations with family, friends, and colleagues, regardless of internet
+              availability or phone model.
+            </p>
+            <ul class="mb-8 space-y-2">
+              <li>&#8226; Free SMS</li>
+              <li>&#8226; Reach everyone</li>
+              <li>&#8226; Simple, private, and fun</li>
+            </ul>
+            <div class="flex space-x-4 mb-8">
+              <a href="https://play.google.com/store/apps/details?id=se.stxt.android">
+                <img src="./src/assets/images/home/google-play-store.svg" class="w-48" />
+              </a>
+              <a href="https://apps.apple.com/se/app/supertext-messenger/id866215398">
+                <img src="./src/assets/images/home/apple-store-img.svg" class="w-44" />
+              </a>
             </div>
-            <div class="swiper-slide">
-              <div
-                class="p-4 6xl:p-16 border border-red-500 rounded-lg text-center shadow-lg relative"
-              >
-                <h2 class="text-gray-600 text-2xl font-bold">
-                  <q>Connecting with home town</q>
-                </h2>
-                <p class="text-gray-600">
-                  <q
-                    >I use Supertext to chat with my parents in hometown, they have no internet
-                    connection. Only Supertext can send app message through SMS. Thank you
-                    Supertext!</q
-                  >
-                </p>
-                <div
-                  class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 rotate-45 w-5 h-5 bg-white border-b border-r border-red-500"
-                ></div>
-              </div>
-              <div class="flex gap-6 justify-center mt-8">
+            <div class="flex items-center gap-3">
+              <div class="flex gap-3 w-40">
                 <img
-                  src="./src/assets/images/home/testimonial_profile.png"
-                  class="w-16 h-16 rounded-full"
+                  src="./src/assets/images/home/user-01.png"
+                  class="size-10 sm:size-15 z-30 relative rounded-full"
                 />
-                <div>
-                  <h5 class="font-semibold">Alfian</h5>
-                  <p class="text-gray-500">Student, East Nusa</p>
+                <img
+                  src="./src/assets/images/home/user-02.png"
+                  class="size-10 sm:size-15 -ml-8 z-20 relative rounded-full"
+                />
+                <img
+                  src="./src/assets/images/home/user-03.png"
+                  class="size-10 sm:size-15 -ml-8 z-10 relative rounded-full"
+                />
+              </div>
+              <div class="flex shrink">
+                <div class="border-r-2 pr-8 border-white">
+                  <div class="text-xl font-bold mb-2">1M +</div>
+                  <div class="text-[#969393] text-sm">Downloads</div>
                 </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div
-                class="p-4 6xl:p-16 border border-red-500 rounded-lg text-center shadow-lg relative"
-              >
-                <h2 class="text-gray-600 text-2xl font-bold">
-                  <q>Connecting with home town</q>
-                </h2>
-                <p class="text-gray-600">
-                  <q
-                    >I use Supertext to chat with my parents in hometown, they have no internet
-                    connection. Only Supertext can send app message through SMS. Thank you
-                    Supertext!</q
-                  >
-                </p>
-                <div
-                  class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 rotate-45 w-5 h-5 bg-white border-b border-r border-red-500"
-                ></div>
-              </div>
-              <div class="flex gap-6 justify-center mt-8">
-                <img
-                  src="./src/assets/images/home/testimonial_profile.png"
-                  class="w-16 h-16 rounded-full"
-                />
-                <div>
-                  <h5 class="font-semibold">Alfian</h5>
-                  <p class="text-gray-500">Student, East Nusa</p>
+                <div class="pl-8">
+                  <div class="text-xl font-bold mb-2">4.4/5</div>
+                  <div class="text-yellow-400 text-sm">
+                    <span class="icon-[tabler--jewish-star-filled]"></span>
+                    <span class="icon-[tabler--jewish-star-filled]"></span>
+                    <span class="icon-[tabler--jewish-star-filled]"></span>
+                    <span class="icon-[tabler--jewish-star-filled]"></span>
+                    <span class="icon-[tabler--star-half-filled]"></span>
+                    <span class="text-[#969393]"> Rating</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div
-          id="testimonial_btn_next"
-          class="bg-red-500 text-white flex justify-center items-center p-3 rounded-full"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 12h14m-6 6l6-6m-6-6l6 6"
-            />
-          </svg>
+        <div class="w-1/2 items-end hidden 5xl:flex">
+          <img src="./src/assets/images/home/sl1.png" class="w-60 h-28" />
+          <img src="./src/assets/images/home/sl2.png" class="w-60 h-28 ml-10 mb-16" />
         </div>
-      </div>
-    </section>
-    <!--end testimonials slider -->
+      </section>
+      <!-- hero section End -->
 
-    <!--super text slider -->
-    <section class="bg-[#dbeae5] py-16 relative px-1 6xl:px-32">
-      <div class="text-center">
-        <img src="./src/assets/images/home/blg-icon.png" class="mx-auto" />
-        <h2 class="text-4xl font-black my-8">Why use Supertext?</h2>
-      </div>
-      <div class="flex items-center gap-1 xl:gap-5 px-1 5xl:px-4">
-        <div
-          id="supertext_btn_prev"
-          class="bg-red-500 text-white flex justify-center items-center p-3 rounded-full"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-          >
-            <path d="M5 12h14M5 12l6 6m-6-6l6-6" />
-          </svg>
+      <!-- telco partners slider -->
+      <section class="py-16 px-3 lg:px-16 xl:px-32 relative">
+        <h2 class="text-center text-gray-500 text-4xl font-black mb-8">Telco partners</h2>
+        <div class="w-full flex gap-5 items-center flex-wrap justify-center 3xl:justify-between">
+          <div class="w-24">
+            <img
+              class="size-full object-cover"
+              src="./src/assets/images/telco-partners/c1.png"
+              alt="image"
+            />
+          </div>
+          <div class="w-10">
+            <img
+              class="size-full object-cover"
+              src="./src/assets/images/telco-partners/c2.png"
+              alt="image"
+            />
+          </div>
+          <div class="w-24">
+            <img
+              class="size-full object-cover"
+              src="./src/assets/images/telco-partners/c3.png"
+              alt="image"
+            />
+          </div>
+          <div class="w-24">
+            <img src="./src/assets/images/telco-partners/c4.png" alt="image" />
+          </div>
+          <div class="w-24">
+            <img
+              class="size-full object-cover"
+              src="./src/assets/images/telco-partners/c5.png"
+              alt="image"
+            />
+          </div>
+          <div class="w-24">
+            <img
+              class="size-full object-cover"
+              src="./src/assets/images/telco-partners/c6.png"
+              alt="image"
+            />
+          </div>
+          <div class="w-24">
+            <img
+              class="size-full object-cover"
+              src="./src/assets/images/telco-partners/c7.png"
+              alt="image"
+            />
+          </div>
+          <div class="w-24">
+            <img
+              class="size-full object-cover"
+              src="./src/assets/images/telco-partners/c8.png"
+              alt="image"
+            />
+          </div>
         </div>
-        <div id="supertext_slider" class="swiper static! w-full h-full">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="h-full relative">
-                <img
-                  src="./src/assets/images/home/b1.png"
-                  alt=""
-                  class="w-full h-auto rounded-md"
-                />
-                <div class="text-center absolute bottom-0 bg-gray-700/70 rounded-lg">
-                  <h3 class="text-white text-xl font-bold my-2">University groups</h3>
-                  <p class="text-white line-clamp-6">
-                    Streamline your school events with dedicated channels. Quickly set up polls to
-                    decide on activities everyone loves, and send instant updates to keep the whole
-                    group informed. Organising has never been this easy or fun!
-                  </p>
-                </div>
-              </div>
+      </section>
+      <!-- telco partners slider end -->
+
+      <!-- about section  -->
+      <section
+        class="bg-[#F6FAF8] py-14 px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-14 3xl:px-16 4xl:px-20"
+      >
+        <div class="flex flex-col justify-center items-center gap-20 3xl:flex-row">
+          <div class="mb-10 w-full 3xl:w-1/2">
+            <h1 class="text-3xl font-black text-[#535C63] mb-5">
+              No data? No internet? No problem!
+            </h1>
+            <p>
+              Picture this: you're chatting with your family, colleagues or friends and some are
+              online using our app, while others are offline, sticking to good old SMS. The twist?
+              Our platform merges all messages into one thread, making group chats possible even
+              when people are offline.
+            </p>
+            <div class="mt-12">
+              <a href="" class="bg-[#309CAC] text-white px-6 py-4 rounded-lg"> More Info</a>
             </div>
-            <div class="swiper-slide">
-              <div class="h-full relative">
-                <img
-                  src="./src/assets/images/home/b2.png"
-                  alt=""
-                  class="w-full h-auto rounded-md"
-                />
-                <div class="text-center absolute bottom-0 bg-gray-700/70 rounded-lg">
-                  <h3 class="text-white text-xl font-bold my-2">Communities</h3>
-                  <p class="text-white line-clamp-6">
-                    Streamline your school events with dedicated channels. Quickly set up polls to
-                    decide on activities everyone loves, and send instant updates to keep the whole
-                    group informed. Organising has never been this easy or fun!
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="h-full relative">
-                <img
-                  src="./src/assets/images/home/b3.png"
-                  alt=""
-                  class="w-full h-auto rounded-md"
-                />
-                <div class="text-center absolute bottom-0 bg-gray-700/70 rounded-lg">
-                  <h3 class="text-white text-xl font-bold my-2">Family & Friends</h3>
-                  <p class="text-white line-clamp-6">
-                    Streamline your school events with dedicated channels. Quickly set up polls to
-                    decide on activities everyone loves, and send instant updates to keep the whole
-                    group informed. Organising has never been this easy or fun!
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="h-full relative">
-                <img
-                  src="./src/assets/images/home/b4.png"
-                  alt=""
-                  class="w-full h-auto rounded-md"
-                />
-                <div class="text-center absolute bottom-0 bg-gray-700/70 rounded-lg">
-                  <h3 class="text-white text-xl font-bold my-2">Family & Friends</h3>
-                  <p class="text-white line-clamp-6">
-                    Streamline your school events with dedicated channels. Quickly set up polls to
-                    decide on activities everyone loves, and send instant updates to keep the whole
-                    group informed. Organising has never been this easy or fun!
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="h-full relative">
-                <img
-                  src="./src/assets/images/home/b5.png"
-                  alt=""
-                  class="w-full h-auto rounded-md"
-                />
-                <div class="text-center absolute bottom-0 bg-gray-700/70 rounded-lg">
-                  <h3 class="text-white text-xl font-bold my-2">Family & Friends</h3>
-                  <p class="text-white line-clamp-6">
-                    Streamline your school events with dedicated channels. Quickly set up polls to
-                    decide on activities everyone loves, and send instant updates to keep the whole
-                    group informed. Organising has never been this easy or fun!
-                  </p>
-                </div>
-              </div>
+          </div>
+
+          <div class="w-full 3xl:w-1/2">
+            <img class="" src="./src/assets/images/home/about-us.png" />
+          </div>
+        </div>
+      </section>
+      <!-- about section end -->
+
+      <!-- communities section -->
+      <section>
+        <div class="flex flex-col justify-center items-center gap-5 4xl:gap-10 4xl:flex-row">
+          <div class="w-full 4xl:w-1/2 p-5 4xl:p-0 order-2 4xl:order-1">
+            <img class="w-full" src="./src/assets/images/home/communities.png" alt="image" />
+          </div>
+
+          <div class="px-5 4xl:px-15 py-5 4xl:mb-10 w-full 4xl:w-1/2 4xl:order-2">
+            <h1 class="text-3xl font-black mb-5">
+              We love<br />
+              communities
+            </h1>
+            <p>
+              Empower your community with Supertext. We have designed a space where everyone can be
+              seen, heard and valued. Connect and grow with others who share your interests, and
+              achieve more together! It's easy to create your own community or to join an existing
+              one.
+            </p>
+            <div class="mt-12">
+              <a href="" class="bg-[#309CAC] text-white px-6 py-4 rounded-lg"> More Info </a>
             </div>
           </div>
         </div>
-        <div
-          id="supertext_btn_next"
-          class="bg-red-500 text-white flex justify-center items-center p-3 rounded-full"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path
+      </section>
+      <!-- end communities section -->
+
+      <!-- features for a better experience slider -->
+      <section
+        class="relative pt-10 pb-24 bg-[url(./src/assets/images/home/feature-slider-bg.png)]"
+      >
+        <h2 class="text-3xl font-black text-[#fff] mb-8 text-center">
+          Features for a better experience
+        </h2>
+        <div class="flex items-center gap-1 xl:gap-5 px-1 5xl:px-4">
+          <div
+            id="fs_btn_prev"
+            class="absolute bottom-6 left-[35%] lg:left-[40%] 2xl:static bg-white text-red-500 flex justify-center items-center p-3 rounded-full"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14M5 12l6 6m-6-6l6-6"
+              />
+            </svg>
+          </div>
+          <div id="feature_slider" class="swiper static! w-full h-40 2xs:h-40 md:h-30 6xl:h-40">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide h-full">
+                <div class="p-2 7xl:p-6 flex gap-1 6xl:gap-2.5 bg-white rounded-3xl h-full">
+                  <div class="w-[20%]">
+                    <img src="./src/assets/images/home/feature-slide-01.png" class="h-8 2xl:h-14" />
+                  </div>
+                  <div class="w-[80%]">
+                    <h5 class="text-lg 6xl:text-xl text-[#535c63] font-black">Mention</h5>
+                    <p class="text-sm 6xl:text-lg text-[#535c63]">
+                      Draw attention with our mention feature. Just add '@' before a name in your
+                      message.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide h-full">
+                <div class="p-2 7xl:p-6 flex gap-1 6xl:gap-2.5 bg-white rounded-3xl h-full">
+                  <div class="w-[20%]">
+                    <img src="./src/assets/images/home/feature-slide-02.png" class="h-8 2xl:h-14" />
+                  </div>
+                  <div class="w-[80%]">
+                    <h5 class="text-xl 6xl:text-xl text-[#535c63] font-black">React</h5>
+                    <p class="text-sm 6xl:text-lg text-[#535c63]">
+                      Share your feelings by reacting with emojis instead of a text message.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide h-full">
+                <div class="p-2 7xl:p-6 flex gap-1 6xl:gap-2.5 bg-white rounded-3xl h-full">
+                  <div class="w-[20%]">
+                    <img src="./src/assets/images/home/feature-slide-03.png" class="h-8 2xl:h-14" />
+                  </div>
+                  <div class="w-[80%]">
+                    <h5 class="text-xl 6xl:text-xl text-[#535c63] font-black">Stickers</h5>
+                    <p class="text-sm 6xl:text-lg text-[#535c63]">
+                      Express yourself with custom stickers from our handpicked illustrators.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide h-full">
+                <div class="p-2 7xl:p-6 flex gap-1 6xl:gap-2.5 bg-white rounded-3xl h-full">
+                  <div class="w-[20%]">
+                    <img src="./src/assets/images/home/feature-slide-04.png" class="h-8 2xl:h-14" />
+                  </div>
+                  <div class="w-[80%]">
+                    <h5 class="text-xl 6xl:text-xl text-[#535c63] font-black">Pin Message</h5>
+                    <p class="text-sm 6xl:text-lg text-[#535c63]">
+                      Ensure important messages are not lost in the conversation flow.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide h-full">
+                <div class="p-2 7xl:p-6 flex gap-1 6xl:gap-2.5 bg-white rounded-3xl h-full">
+                  <div class="w-[20%]">
+                    <img src="./src/assets/images/home/feature-slide-05.png" class="h-8 2xl:h-14" />
+                  </div>
+                  <div class="w-[80%]">
+                    <h5 class="text-xl 6xl:text-xl text-[#535c63] font-black">Stories</h5>
+                    <p class="text-sm 6xl:text-lg text-[#535c63]">
+                      Share your day with stories. Post videos, photos, or text that vanish after 24
+                      hours.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide h-full">
+                <div class="p-2 7xl:p-6 flex gap-1 6xl:gap-2.5 bg-white rounded-3xl h-full">
+                  <div class="w-[20%]">
+                    <img src="./src/assets/images/home/feature-slide-06.png" class="h-8 2xl:h-14" />
+                  </div>
+                  <div class="w-[80%]">
+                    <h5 class="text-xl 6xl:text-xl text-[#535c63] font-black">Share Files</h5>
+                    <p class="text-sm 6xl:text-lg text-[#535c63]">
+                      Share files, photos, videos, voice messages with colleagues or friends
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="feature_slider_pagination"></div>
+          </div>
+          <div
+            id="fs_btn_next"
+            class="absolute bottom-6 right-[35%] lg:right-[40%] 2xl:static bg-white text-red-500 flex justify-center items-center p-3 rounded-full"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14m-6 6l6-6m-6-6l6 6"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+      <!--end features for a better experience slider -->
+
+      <!-- testimonials slider -->
+      <section class="py-16 relative px-1 6xl:px-32">
+        <h2 class="text-gray-600 text-center text-3xl font-bold mb-16">What do our users say?</h2>
+        <div class="flex items-center gap-1 xl:gap-5 px-1 5xl:px-4">
+          <div
+            id="testimonial_btn_prev"
+            class="bg-red-500 text-white flex justify-center items-center p-3 rounded-full"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M5 12h14m-6 6l6-6m-6-6l6 6"
-            />
-          </svg>
+            >
+              <path d="M5 12h14M5 12l6 6m-6-6l6-6" />
+            </svg>
+          </div>
+          <div id="testimonial_slider" class="swiper static! size-full">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div
+                  class="p-4 6xl:p-16 border border-red-500 rounded-lg text-center shadow-lg relative"
+                >
+                  <h2 class="text-gray-600 text-2xl font-bold">
+                    <q>Connecting with home town</q>
+                  </h2>
+                  <p class="text-gray-600">
+                    <q
+                      >I use Supertext to chat with my parents in hometown, they have no internet
+                      connection. Only Supertext can send app message through SMS. Thank you
+                      Supertext!</q
+                    >
+                  </p>
+                  <div
+                    class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 rotate-45 w-5 h-5 bg-white border-b border-r border-red-500"
+                  ></div>
+                </div>
+                <div class="flex gap-6 justify-center mt-8">
+                  <img
+                    src="./src/assets/images/home/testimonial_profile.png"
+                    class="w-16 h-16 rounded-full"
+                  />
+                  <div>
+                    <h5 class="font-semibold">Alfian</h5>
+                    <p class="text-gray-500">Student, East Nusa</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="p-4 6xl:p-16 border border-red-500 rounded-lg text-center shadow-lg relative"
+                >
+                  <h2 class="text-gray-600 text-2xl font-bold">
+                    <q>Connecting with home town</q>
+                  </h2>
+                  <p class="text-gray-600">
+                    <q
+                      >I use Supertext to chat with my parents in hometown, they have no internet
+                      connection. Only Supertext can send app message through SMS. Thank you
+                      Supertext!</q
+                    >
+                  </p>
+                  <div
+                    class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 rotate-45 w-5 h-5 bg-white border-b border-r border-red-500"
+                  ></div>
+                </div>
+                <div class="flex gap-6 justify-center mt-8">
+                  <img
+                    src="./src/assets/images/home/testimonial_profile.png"
+                    class="w-16 h-16 rounded-full"
+                  />
+                  <div>
+                    <h5 class="font-semibold">Alfian</h5>
+                    <p class="text-gray-500">Student, East Nusa</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="p-4 6xl:p-16 border border-red-500 rounded-lg text-center shadow-lg relative"
+                >
+                  <h2 class="text-gray-600 text-2xl font-bold">
+                    <q>Connecting with home town</q>
+                  </h2>
+                  <p class="text-gray-600">
+                    <q
+                      >I use Supertext to chat with my parents in hometown, they have no internet
+                      connection. Only Supertext can send app message through SMS. Thank you
+                      Supertext!</q
+                    >
+                  </p>
+                  <div
+                    class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 rotate-45 w-5 h-5 bg-white border-b border-r border-red-500"
+                  ></div>
+                </div>
+                <div class="flex gap-6 justify-center mt-8">
+                  <img
+                    src="./src/assets/images/home/testimonial_profile.png"
+                    class="w-16 h-16 rounded-full"
+                  />
+                  <div>
+                    <h5 class="font-semibold">Alfian</h5>
+                    <p class="text-gray-500">Student, East Nusa</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="testimonial_btn_next"
+            class="bg-red-500 text-white flex justify-center items-center p-3 rounded-full"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14m-6 6l6-6m-6-6l6 6"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+      <!--end testimonials slider -->
+
+      <!--super text slider -->
+      <section class="bg-[#dbeae5] py-16 relative px-1 6xl:px-32">
+        <div class="text-center">
+          <img src="./src/assets/images/home/blg-icon.png" class="mx-auto" />
+          <h2 class="text-4xl font-black my-8">Why use Supertext?</h2>
+        </div>
+        <div class="flex items-center gap-1 xl:gap-5 px-1 5xl:px-4">
+          <div
+            id="supertext_btn_prev"
+            class="bg-red-500 text-white flex justify-center items-center p-3 rounded-full"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M5 12l6 6m-6-6l6-6" />
+            </svg>
+          </div>
+          <div id="supertext_slider" class="swiper static! w-full h-full">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="h-full relative">
+                  <img
+                    src="./src/assets/images/home/b1.png"
+                    alt=""
+                    class="w-full h-auto rounded-md"
+                  />
+                  <div class="text-center absolute bottom-0 bg-gray-700/70 rounded-lg">
+                    <h3 class="text-white text-xl font-bold my-2">University groups</h3>
+                    <p class="text-white line-clamp-6">
+                      Streamline your school events with dedicated channels. Quickly set up polls to
+                      decide on activities everyone loves, and send instant updates to keep the
+                      whole group informed. Organising has never been this easy or fun!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="h-full relative">
+                  <img
+                    src="./src/assets/images/home/b2.png"
+                    alt=""
+                    class="w-full h-auto rounded-md"
+                  />
+                  <div class="text-center absolute bottom-0 bg-gray-700/70 rounded-lg">
+                    <h3 class="text-white text-xl font-bold my-2">Communities</h3>
+                    <p class="text-white line-clamp-6">
+                      Streamline your school events with dedicated channels. Quickly set up polls to
+                      decide on activities everyone loves, and send instant updates to keep the
+                      whole group informed. Organising has never been this easy or fun!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="h-full relative">
+                  <img
+                    src="./src/assets/images/home/b3.png"
+                    alt=""
+                    class="w-full h-auto rounded-md"
+                  />
+                  <div class="text-center absolute bottom-0 bg-gray-700/70 rounded-lg">
+                    <h3 class="text-white text-xl font-bold my-2">Family & Friends</h3>
+                    <p class="text-white line-clamp-6">
+                      Streamline your school events with dedicated channels. Quickly set up polls to
+                      decide on activities everyone loves, and send instant updates to keep the
+                      whole group informed. Organising has never been this easy or fun!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="h-full relative">
+                  <img
+                    src="./src/assets/images/home/b4.png"
+                    alt=""
+                    class="w-full h-auto rounded-md"
+                  />
+                  <div class="text-center absolute bottom-0 bg-gray-700/70 rounded-lg">
+                    <h3 class="text-white text-xl font-bold my-2">Family & Friends</h3>
+                    <p class="text-white line-clamp-6">
+                      Streamline your school events with dedicated channels. Quickly set up polls to
+                      decide on activities everyone loves, and send instant updates to keep the
+                      whole group informed. Organising has never been this easy or fun!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="h-full relative">
+                  <img
+                    src="./src/assets/images/home/b5.png"
+                    alt=""
+                    class="w-full h-auto rounded-md"
+                  />
+                  <div class="text-center absolute bottom-0 bg-gray-700/70 rounded-lg">
+                    <h3 class="text-white text-xl font-bold my-2">Family & Friends</h3>
+                    <p class="text-white line-clamp-6">
+                      Streamline your school events with dedicated channels. Quickly set up polls to
+                      decide on activities everyone loves, and send instant updates to keep the
+                      whole group informed. Organising has never been this easy or fun!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="supertext_btn_next"
+            class="bg-red-500 text-white flex justify-center items-center p-3 rounded-full"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14m-6 6l6-6m-6-6l6 6"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--footer -->
+    <footer class="bg-white py-6">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col 2xl:flex-row 2xl:items-center gap-8">
+          <a class="navbar-brand w-full 2xl:w-[20%]" href="index.html">
+            <img src="./src/assets/images/header/logo.png" alt="Supertext Logo" class="h-12" />
+          </a>
+          <div class="flex-1">
+            <ul class="flex flex-col 2xl:flex-row justify-between text-gray-700 text-sm gap-4">
+              <li><a href="faqs.html" class="hover:text-blue-600">FAQ's</a></li>
+              <li>
+                <a href="terms-and-conditions.html" class="hover:text-blue-600">
+                  Terms and Conditions
+                </a>
+              </li>
+              <li><a href="privacy-policy.html" class="hover:text-blue-600">Privacy Policy</a></li>
+              <li><a href="contact-us.html" class="hover:text-blue-600">Support</a></li>
+              <li>
+                <a href="advertise-with-us.html" class="hover:text-blue-600">Advertise With Us?</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex space-x-4 justify-start 2xl:justify-center w-full 2xl:w-[20%]">
+            <a href="https://www.facebook.com/supertextmessenger" target="_blank">
+              <img src="./src/assets/images/footer/facebook.png" alt="Facebook" class="h-6" />
+            </a>
+            <a href="https://www.instagram.com/getsupertext/" target="_blank">
+              <img src="./src/assets/images/footer/instagram.png" alt="Instagram" class="h-6" />
+            </a>
+            <a href="https://www.linkedin.com/company/smsgrupp" target="_blank">
+              <img src="./src/assets/images/footer/linkedin.png" alt="LinkedIn" class="h-6" />
+            </a>
+          </div>
+        </div>
+
+        <hr class="my-4 border-gray-300" />
+
+        <div class="flex flex-col 2xl:flex-row gap-5 items-start 2xl:items-center">
+          <div class="flex space-x-4 w-full 2xl:w-1/2">
+            <a href="https://play.google.com/store/apps/details?id=se.stxt.android" target="_blank">
+              <img
+                src="./src/assets/images/home/google-play-store.svg"
+                alt="Google Play Store"
+                class="h-10"
+              />
+            </a>
+            <a href="https://apps.apple.com/se/app/supertext-messenger/id866215398" target="_blank">
+              <img
+                src="./src/assets/images/home/apple-store-img.svg"
+                alt="Apple App Store"
+                class="h-10"
+              />
+            </a>
+          </div>
+          <p class="text-gray-600 text-sm">© Copyright 2024, All Rights Reserved</p>
         </div>
       </div>
-    </section>
+
+      <!-- Go to Top Button -->
+      <div
+        class="fixed bottom-4 right-4 z-[999] opacity-0 translate-y-10 transition-all duration-300 ease-in-out"
+        id="go_to_top"
+      >
+        <button class="block size-12 bg-red-400 text-white border-2 border-[#FFB29C] rounded-full">
+          <span class="icon-[ix--arrow-up] size-full"></span>
+        </button>
+      </div>
+    </footer>
+    <!-- end footer -->
+
     <script type="module" src="/src/assets/js/main.ts"></script>
   </body>
 </html>

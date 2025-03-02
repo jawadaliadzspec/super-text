@@ -13,6 +13,16 @@ document.getElementById('mobileLangBtn')!.addEventListener('click', function () 
   document.getElementById('mobileLangDropdown')!.classList.toggle('hidden');
 });
 
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('preloader')!.classList.add('opacity-0');
+    setTimeout(() => {
+      document.getElementById('preloader')!.style.display = 'none';
+      document.getElementById('content')!.classList.remove('opacity-0');
+    }, 500);
+  }, 5000);
+});
+
 //  feature slider
 new Swiper('#feature_slider', {
   loop: true,
@@ -62,4 +72,24 @@ new Swiper('#supertext_slider', {
     896: { slidesPerView: 2, spaceBetween: 20 },
     1024: { slidesPerView: 3, spaceBetween: 20 }
   }
+});
+
+//
+const goTopBtn = document.getElementById('go_to_top');
+
+// Show the button when scrolling down
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    goTopBtn!.classList.add('opacity-100', 'translate-y-0');
+    goTopBtn!.classList.remove('opacity-0', 'translate-y-10');
+  } else {
+    goTopBtn!.classList.add('opacity-0', 'translate-y-10');
+    goTopBtn!.classList.remove('opacity-100', 'translate-y-0');
+  }
+});
+
+// Scroll to top when button is clicked
+goTopBtn!.addEventListener('click', (event) => {
+  event.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
