@@ -38,6 +38,7 @@
               About <span class="icon-[tabler--chevron-down]"></span>
             </button>
             <div id="aboutDropdown" class="dropdown-menu">
+              <a href="./src/pages/about-us.html" class="dropdown-item px-4">About Us</a>
               <a href="#" class="dropdown-item px-4">Company</a>
               <a href="#" class="dropdown-item">Team</a>
               <a href="#" class="dropdown-item">Careers</a>
@@ -52,13 +53,14 @@
               Features <span class="icon-[tabler--chevron-down]"></span>
             </button>
             <div id="featuresDropdown" class="dropdown-menu">
+              <a href="./src/pages/features.html" class="dropdown-item px-4">Features</a>
               <a href="#" class="dropdown-item">Messaging</a>
               <a href="#" class="dropdown-item">Integrations</a>
               <a href="#" class="dropdown-item">Security</a>
               <a href="#" class="dropdown-item">AI Tools</a>
             </div>
           </div>
-          <a href="#" class="hover:text-red-500">Use Cases</a>
+          <a href="./src/pages/use-cases.html" class="hover:text-red-500">Use Cases</a>
           <div class="relative">
             <button
               onclick="toggleDropdown('businessDropdown')"
@@ -67,7 +69,9 @@
               For Business <span class="icon-[tabler--chevron-down]"></span>
             </button>
             <div id="businessDropdown" class="dropdown-menu">
-              <a href="#" class="dropdown-item">Advertise with Us</a>
+              <a href="./src/pages/advertise-with-us.html" class="dropdown-item">
+                Advertise with Us
+              </a>
             </div>
           </div>
           <div class="relative">
@@ -78,10 +82,10 @@
               Help Center <span class="icon-[tabler--chevron-down]"></span>
             </button>
             <div id="helpDropdown" class="dropdown-menu">
-              <a href="#" class="dropdown-item">FAQs</a>
+              <a href="./src/pages/faqs.html" class="dropdown-item">FAQs</a>
               <a href="#" class="dropdown-item">ToS, ToC</a>
-              <a href="#" class="dropdown-item">SMS Commands</a>
-              <a href="#" class="dropdown-item">Contact Us</a>
+              <a href="./src/pages/sms-commands.html" class="dropdown-item">SMS Commands</a>
+              <a href="./src/pages/contact-us.html" class="dropdown-item">Contact Us</a>
             </div>
           </div>
         </div>
@@ -146,10 +150,11 @@
             onclick="toggleDropdown('mobileAbout')"
             class="hover:text-red-500 flex items-center justify-between w-full cursor-pointer"
           >
-            <span>About</span>
+            <span>About Us</span>
             <span class="icon-[tabler--chevron-down]"></span>
           </button>
           <div id="mobileAbout" class="dropdown-mobile">
+            <a href="./src/pages/about-us.html" class="dropdown-ite-mob">About Us</a>
             <a href="#" class="dropdown-ite-mob">Company</a>
             <a href="#" class="dropdown-ite-mob">Team</a>
             <a href="#" class="dropdown-ite-mob">Careers</a>
@@ -165,13 +170,17 @@
             <span class="icon-[tabler--chevron-down]"></span>
           </button>
           <div id="mobileFeatures" class="dropdown-mobile">
+            <a href="./src/pages/features.html" class="dropdown-ite-mob">Features</a>
             <a href="#" class="dropdown-ite-mob">Messaging</a>
             <a href="#" class="dropdown-ite-mob">Integrations</a>
             <a href="#" class="dropdown-ite-mob">Security</a>
             <a href="#" class="dropdown-ite-mob">AI Tools</a>
           </div>
         </div>
-        <a href="#" class="block w-full hover:text-red-200 py-2 border-b border-gray-200">
+        <a
+          href="./src/pages/use-cases.html"
+          class="block w-full hover:text-red-200 py-2 border-b border-gray-200"
+        >
           Use Cases
         </a>
         <div class="relative py-2 border-b border-gray-200">
@@ -183,7 +192,9 @@
             <span class="icon-[tabler--chevron-down]"></span>
           </button>
           <div id="mobileBusiness" class="dropdown-mobile">
-            <a href="#" class="dropdown-ite-mob">Advertise with Us</a>
+            <a href="./src/pages/advertise-with-us.html" class="dropdown-ite-mob">
+              Advertise with Us
+            </a>
           </div>
         </div>
         <div class="relative py-2 border-b border-gray-200">
@@ -195,10 +206,10 @@
             <span class="icon-[tabler--chevron-down]"></span>
           </button>
           <div id="mobilehelp" class="dropdown-mobile">
-            <a href="#" class="dropdown-ite-mob">FAQs</a>
+            <a href="./src/pages/faqs.html" class="dropdown-ite-mob">FAQs</a>
             <a href="#" class="dropdown-ite-mob">ToS, ToC</a>
-            <a href="#" class="dropdown-ite-mob">SMS Commands</a>
-            <a href="#" class="dropdown-ite-mob">Contact Us</a>
+            <a href="./src/pages/sms-commands.html" class="dropdown-ite-mob">SMS Commands</a>
+            <a href="./src/pages/contact-us.html" class="dropdown-ite-mob">Contact Us</a>
           </div>
         </div>
       </div>
@@ -789,16 +800,22 @@
           </a>
           <div class="flex-1">
             <ul class="flex flex-col 2xl:flex-row justify-between text-gray-700 text-sm gap-4">
-              <li><a href="faqs.html" class="hover:text-red-500">FAQ's</a></li>
+              <li><a href="./src/pages/faqs.html" class="hover:text-red-500">FAQ's</a></li>
               <li>
-                <a href="terms-and-conditions.html" class="hover:text-red-500">
+                <a href="./src/pages/terms-and-conditions.html" class="hover:text-red-500">
                   Terms and Conditions
                 </a>
               </li>
-              <li><a href="privacy-policy.html" class="hover:text-red-500">Privacy Policy</a></li>
-              <li><a href="contact-us.html" class="hover:text-red-500">Support</a></li>
               <li>
-                <a href="advertise-with-us.html" class="hover:text-red-500">Advertise With Us?</a>
+                <a href="./src/pages/privacy-policy.html" class="hover:text-red-500"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li><a href="./src/pages/contact-us.html" class="hover:text-red-500">Support</a></li>
+              <li>
+                <a href="./src/pages/advertise-with-us.html" class="hover:text-red-500"
+                  >Advertise With Us?</a
+                >
               </li>
             </ul>
           </div>
