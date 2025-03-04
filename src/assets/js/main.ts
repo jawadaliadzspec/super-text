@@ -40,6 +40,21 @@ window.onload = function () {
     dropdown!.classList.toggle('active');
   }
   window.toggleDropdown = toggleDropdown;
+
+  function toggleFAQ(id: number) {
+    const content = document.getElementById(`faq-${id}`);
+    const icon = document.getElementById(`icon-${id}`);
+
+    if (content!.classList.contains('hidden')) {
+      content!.classList.remove('hidden');
+      icon!.textContent = '-';
+    } else {
+      content!.classList.add('hidden');
+      icon!.textContent = '+';
+    }
+  }
+
+  window.toggleFAQ = toggleFAQ;
 };
 
 // preloader
