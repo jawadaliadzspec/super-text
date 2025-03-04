@@ -44,13 +44,33 @@ window.onload = function () {
   function toggleFAQ(id: number) {
     const content = document.getElementById(`faq-${id}`);
     const icon = document.getElementById(`icon-${id}`);
+    const allContents = document.querySelectorAll<HTMLElement>('.faq_content');
+    const allIcons = document.querySelectorAll<HTMLElement>('.faq_icon');
 
-    if (content!.classList.contains('hidden')) {
-      content!.classList.remove('hidden');
-      icon!.textContent = '-';
+    if (!content || !icon) return;
+
+    const isOpen = !content.classList.contains('hidden');
+
+    // Close all FAQs before opening the selected one
+    allContents.forEach((el) => el.classList.add('hidden'));
+    allIcons.forEach((el) => {
+      {
+        el.textContent = '+';
+        el.classList.remove('bg-red-500', 'text-white');
+        el.classList.add('border', 'border-gray-400', 'text-black');
+      }
+    });
+
+    if (isOpen) {
+      content.classList.add('hidden');
+      icon.textContent = '+';
+      icon.classList.remove('bg-red-500', 'text-white');
+      icon.classList.add('border', 'border-gray-400', 'text-black');
     } else {
-      content!.classList.add('hidden');
-      icon!.textContent = '+';
+      content.classList.remove('hidden');
+      icon.textContent = '-';
+      icon.classList.add('bg-red-500', 'text-white');
+      icon.classList.remove('border', 'border-gray-400', 'text-black');
     }
   }
 
