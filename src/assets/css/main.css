@@ -22,7 +22,7 @@
 }
 
 .feature_slider_pagination {
-  @apply flex justify-center items-center gap-1 absolute bottom-10!;
+  @apply flex justify-center items-center gap-1 absolute bottom-18!;
 }
 
 .custom-bullet {

@@ -133,6 +133,7 @@ new Swiper('#supertext_slider', {
     prevEl: '#supertext_btn_prev'
   },
   breakpoints: {
+    320: { slidesPerView: 2, spaceBetween: 10 },
     672: { slidesPerView: 2, spaceBetween: 10 },
     896: { slidesPerView: 2, spaceBetween: 20 },
     1024: { slidesPerView: 3, spaceBetween: 20 }
