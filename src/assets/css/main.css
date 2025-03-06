@@ -34,7 +34,7 @@
 }
 
 .dropdown-menu {
-  @apply absolute hidden bg-[#F6FAF8] shadow-md w-40 mt-6 left-0 transition-all duration-300 opacity-0 transform scale-95;
+  @apply absolute hidden bg-[#F6FAF8] shadow-md w-48 mt-6 left-0 transition-all duration-300 opacity-0 transform scale-95;
 }
 
 .dropdown-menu.active {
