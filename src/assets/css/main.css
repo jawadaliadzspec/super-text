@@ -1,25 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 @import 'tailwindcss';
 @plugin "@iconify/tailwind4";
-@import 'swiper/css/bundle';
-
-@theme {
-  /* --breakpoint-*: initial; */
-  --breakpoint-3xs: 16rem; /* 256px */
-  --breakpoint-2xs: 18rem; /* 288px */
-  --breakpoint-xs: 20rem; /* 320px */
-  --breakpoint-sm: 24rem; /* 384px */
-  --breakpoint-md: 28rem; /* 448px */
-  --breakpoint-lg: 32rem; /* 512px */
-  --breakpoint-xl: 36rem; /* 576px */
-  --breakpoint-2xl: 42rem; /* 672px */
-  --breakpoint-3xl: 48rem; /* 768px */
-  --breakpoint-4xl: 56rem; /* 896px */
-  --breakpoint-5xl: 64rem; /* 1024px */
-  --breakpoint-6xl: 72rem; /* 1152px */
-  --breakpoint-7xl: 80rem; /* 1280px */
-  --breakpoint-8xl: 88rem; /* 1600px */
-}
+@import 'swiper/css/bundle'; */
 
 .feature_slider_pagination {
   @apply flex justify-center items-center gap-1 absolute bottom-18!;

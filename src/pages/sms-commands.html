@@ -2,11 +2,64 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sms Commands</title>
+    <title>Super Text</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        /* --breakpoint-*: initial; */
+        --breakpoint-3xs: 16rem; /* 256px */
+        --breakpoint-2xs: 18rem; /* 288px */
+        --breakpoint-xs: 20rem; /* 320px */
+        --breakpoint-sm: 24rem; /* 384px */
+        --breakpoint-md: 28rem; /* 448px */
+        --breakpoint-lg: 32rem; /* 512px */
+        --breakpoint-xl: 36rem; /* 576px */
+        --breakpoint-2xl: 42rem; /* 672px */
+        --breakpoint-3xl: 48rem; /* 768px */
+        --breakpoint-4xl: 56rem; /* 896px */
+        --breakpoint-5xl: 64rem; /* 1024px */
+        --breakpoint-6xl: 72rem; /* 1152px */
+        --breakpoint-7xl: 80rem; /* 1280px */
+        --breakpoint-8xl: 88rem; /* 1600px */
+      }
+
+      .feature_slider_pagination {
+        @apply flex justify-center items-center gap-1 absolute bottom-18!;
+      }
+
+      .custom-bullet {
+        @apply size-3 bg-white opacity-100 rounded-full inline-block transition-all duration-300 ease-in-out;
+      }
+
+      .custom-bullet.swiper-pagination-bullet-active {
+        @apply w-10! h-3 rounded-full bg-[#FFB29C];
+      }
+
+      .dropdown-menu {
+        @apply absolute bg-[#F6FAF8] shadow-md w-52 mt-6 right-0 6xl:left-0;
+      }
+
+      .dropdown-menu.active {
+        @apply block opacity-100 scale-100;
+      }
+
+      .dropdown-item {
+        @apply block px-4 py-2 hover:bg-gray-100 border-b border-gray-300;
+      }
+    </style>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script src="../assets/js/main.js" defer></script>
   </head>
-  <body>
+
+  <body class="font-[Open_Sans]">
     <!-- Preloader -->
     <div
       id="preloader"
@@ -25,63 +78,29 @@
       <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
         <div class="flex items-center gap-2">
           <a href="../../index.html">
-            <img src="../assets/images/header/logo.png" alt="Supertext Logo" class="h-8" />
+            <img src="../assets/images/header/logo.png" alt="Supertext Logo" class="h-12" />
           </a>
         </div>
 
         <div class="hidden 6xl:flex space-x-6 text-gray-700">
+          <a href="./about-us.html" class="text-[#3e3f66] hover:text-[#ef4524]"> About Us </a>
+          <a href="./features.html" class="text-[#3e3f66] hover:text-[#ef4524]"> Features</a>
+          <a href="./use-cases.html" class="text-[#3e3f66] hover:text-[#ef4524]">Use Cases</a>
+          <a href="./advertise-with-us.html" class="text-[#3e3f66] hover:text-[#ef4524]">
+            Advertise with Us
+          </a>
           <div class="relative">
             <button
-              onclick="toggleDropdown('aboutDropdown')"
-              class="hover:text-red-500 flex items-center gap-1 cursor-pointer"
+              onclick="toggleMenu('helpDropdown','dropdown')"
+              class="text-[#3e3f66] hover:text-[#ef4524] flex items-center gap-1 cursor-pointer"
             >
-              About Us <span class="icon-[tabler--chevron-down]"></span>
+              Help Center
+              <span class="iconify" data-icon="tabler:chevron-down" data-inline="false"></span>
             </button>
-            <div id="aboutDropdown" class="dropdown-menu">
-              <a href="./about-us.html" class="dropdown-item px-4">About Us</a>
-              <a href="#" class="dropdown-item px-4">Company</a>
-              <a href="#" class="dropdown-item">Team</a>
-              <a href="#" class="dropdown-item">Careers</a>
-              <a href="#" class="dropdown-item">Press</a>
-            </div>
-          </div>
-          <div class="relative">
-            <button
-              onclick="toggleDropdown('featuresDropdown')"
-              class="hover:text-red-500 flex items-center gap-1 cursor-pointer"
-            >
-              Features <span class="icon-[tabler--chevron-down]"></span>
-            </button>
-            <div id="featuresDropdown" class="dropdown-menu">
-              <a href="./features.html" class="dropdown-item px-4">Features</a>
-              <a href="#" class="dropdown-item">Messaging</a>
-              <a href="#" class="dropdown-item">Integrations</a>
-              <a href="#" class="dropdown-item">Security</a>
-              <a href="#" class="dropdown-item">AI Tools</a>
-            </div>
-          </div>
-          <a href="./use-cases.html" class="hover:text-red-500">Use Cases</a>
-          <div class="relative">
-            <button
-              onclick="toggleDropdown('businessDropdown')"
-              class="hover:text-red-500 flex items-center gap-1 cursor-pointer"
-            >
-              For Business <span class="icon-[tabler--chevron-down]"></span>
-            </button>
-            <div id="businessDropdown" class="dropdown-menu">
-              <a href="./advertise-with-us.html" class="dropdown-item"> Advertise with Us </a>
-            </div>
-          </div>
-          <div class="relative">
-            <button
-              onclick="toggleDropdown('helpDropdown')"
-              class="hover:text-red-500 flex items-center gap-1 cursor-pointer"
-            >
-              Help Center <span class="icon-[tabler--chevron-down]"></span>
-            </button>
-            <div id="helpDropdown" class="dropdown-menu">
+            <div id="helpDropdown" class="dropdown-menu hidden">
               <a href="./faqs.html" class="dropdown-item">FAQs</a>
-              <a href="#" class="dropdown-item">ToS, ToC</a>
+              <a href="./terms-and-conditions.html" class="dropdown-item"> Terms and Conditions </a>
+              <a href="./privacy-policy.html" class="dropdown-item"> Privacy Policy </a>
               <a href="./sms-commands.html" class="dropdown-item">SMS Commands</a>
               <a href="./contact-us.html" class="dropdown-item">Contact Us</a>
             </div>
@@ -91,38 +110,46 @@
         <div class="flex items-center gap-3">
           <div class="relative">
             <button
-              onclick="toggleDropdown('langDropdown')"
+              onclick="toggleMenu('language_dropdown','language')"
               class="flex items-center px-2 py-2 gap-1 rounded-md bg-[#F6FAF8] cursor-pointer"
             >
               <img
-                class="size-6 lg:h-4 lg:w-6 lg:mr-2"
+                class="size-8 mr-1 6xl:h-6 6xl:w-8 6xl::mr-2"
                 src="../assets/images/header/language-flag.svg"
                 alt="language flag"
               />
-              <span class="hidden lg:flex"> Language </span>
-              <span class="icon-[tabler--chevron-down]"></span>
+              <span class="hidden 6xl:flex"> Language </span>
+
+              <span
+                class="iconify size-6"
+                data-icon="tabler:chevron-down"
+                data-inline="false"
+              ></span>
+              <!-- <span class="icon-[tabler--chevron-down]"></span> -->
             </button>
-            <div id="langDropdown" class="dropdown-menu">
+            <div id="language_dropdown" class="dropdown-menu hidden">
               <a href="#" class="dropdown-item"> 🇬🇧 English </a>
               <a href="#" class="dropdown-item"> 🇫🇷 French </a>
               <a href="#" class="dropdown-item">🇩🇪 German</a>
             </div>
           </div>
-          <a
-            href="#"
-            class="p-2.5 lg:px-4 lg:py-2 gap-2 rounded-full lg:rounded-md flex items-center bg-[#309CAC] text-white"
-          >
-            <span class="hidden xl:flex">Download</span>
-            <span class="icon-[tabler--download]"></span>
+          <a href="#" class="p-2 rounded-full xl:hidden flex bg-[#309CAC] text-white">
+            <span class="iconify size-6" data-icon="tabler:download" data-inline="false"></span>
           </a>
-          <a href="#" class="text-[#309CAC]">Login</a>
+          <a
+            href="https://getsupertext.com/login"
+            class="hidden 6xl:block text-[#3e3f66] hover:text-[#ef4524]"
+          >
+            Login
+          </a>
 
           <button
-            id="menuBtn"
-            class="6xl:hidden focus:outline-none text-white bg-red-500 rounded-full p-2"
+            type="button"
+            onclick="toggleMenu('mobile_dropdown', 'menu')"
+            class="6xl:hidden focus:outline-none text-white bg-red-500 rounded-full p-2 cursor-pointer"
           >
             <svg
-              class="size-5"
+              class="size-6"
               fill="none"
               stroke="currentColor"
               stroke-width="2"
@@ -140,74 +167,66 @@
 
       <!-- mobile menu -->
       <div
-        id="mobile_menu"
-        class="6xl:hidden bg-[#F6FAF8] p-5 fixed inset-x-0 top-24 transform transition-all duration-300 ease-in-out opacity-0 -translate-y-10 pointer-events-none"
+        id="mobile_dropdown"
+        class="6xl:hidden bg-[#F6FAF8] p-5 fixed inset-x-0 top-24 transition-all duration-300 ease-in-out hidden"
       >
-        <div class="relative py-2 border-b border-gray-200">
+        <a href="./about-us.html" class="block w-full text-[#3e3f66] hover:text-[#ef4524] py-2">
+          About Us
+        </a>
+        <a href="./features.html" class="block w-full text-[#3e3f66] hover:text-[#ef4524] py-2">
+          Features
+        </a>
+        <a href="./use-cases.html" class="block w-full text-[#3e3f66] hover:text-[#ef4524] py-2">
+          Use Cases
+        </a>
+        <a
+          href="./advertise-with-us.html"
+          class="block w-full text-[#3e3f66] hover:text-[#ef4524] py-2"
+        >
+          Advertise with Us
+        </a>
+        <div class="relative py-2">
           <button
-            onclick="toggleDropdown('mobileAbout')"
-            class="hover:text-red-500 flex items-center justify-between w-full cursor-pointer"
+            onclick="toggleMenu('mobilehelp','mobile')"
+            class="text-[#3e3f66] hover:text-[#ef4524] flex items-center justify-between w-full cursor-pointer"
           >
-            <span>About Us</span>
-            <span class="icon-[tabler--chevron-down]"></span>
+            <span>Help Center </span>
+            <span class="iconify" data-icon="tabler:chevron-down" data-inline="false"></span>
           </button>
-          <div id="mobileAbout" class="dropdown-mobile">
-            <a href="./about-us.html" class="dropdown-ite-mob">About Us</a>
-            <a href="#" class="dropdown-ite-mob">Company</a>
-            <a href="#" class="dropdown-ite-mob">Team</a>
-            <a href="#" class="dropdown-ite-mob">Careers</a>
-            <a href="#" class="dropdown-ite-mob">Press</a>
-          </div>
-        </div>
-        <div class="relative py-2 border-b border-gray-200">
-          <button
-            onclick="toggleDropdown('mobileFeatures')"
-            class="hover:text-red-500 flex items-center justify-between w-full cursor-pointer"
-          >
-            <span>Features</span>
-            <span class="icon-[tabler--chevron-down]"></span>
-          </button>
-          <div id="mobileFeatures" class="dropdown-mobile">
-            <a href="./features.html" class="dropdown-ite-mob">Features</a>
-            <a href="#" class="dropdown-ite-mob">Messaging</a>
-            <a href="#" class="dropdown-ite-mob">Integrations</a>
-            <a href="#" class="dropdown-ite-mob">Security</a>
-            <a href="#" class="dropdown-ite-mob">AI Tools</a>
+          <div id="mobilehelp" class="dropdown-mobile hidden pl-6">
+            <a href="./faqs.html" class="block w-full text-[#3e3f66] hover:text-[#ef4524] py-2"
+              >FAQs</a
+            >
+            <a
+              href="./terms-and-conditions.html"
+              class="block w-full text-[#3e3f66] hover:text-[#ef4524] py-2"
+            >
+              Terms and Conditions
+            </a>
+            <a
+              href="./privacy-policy.html"
+              class="block w-full text-[#3e3f66] hover:text-[#ef4524] py-2"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="./sms-commands.html"
+              class="block w-full text-[#3e3f66] hover:text-[#ef4524] py-2"
+              >SMS Commands</a
+            >
+            <a
+              href="./contact-us.html"
+              class="block w-full text-[#3e3f66] hover:text-[#ef4524] py-2"
+              >Contact Us</a
+            >
           </div>
         </div>
         <a
-          href="./use-cases.html"
-          class="block w-full hover:text-red-200 py-2 border-b border-gray-200"
+          href="https://getsupertext.com/login"
+          class="block 6xl:hidden w-full text-[#3e3f66] hover:text-[#ef4524] py-2"
         >
-          Use Cases
+          Login
         </a>
-        <div class="relative py-2 border-b border-gray-200">
-          <button
-            onclick="toggleDropdown('mobileBusiness')"
-            class="hover:text-red-500 flex items-center justify-between w-full cursor-pointer"
-          >
-            <span>For Business </span>
-            <span class="icon-[tabler--chevron-down]"></span>
-          </button>
-          <div id="mobileBusiness" class="dropdown-mobile">
-            <a href="./advertise-with-us.html" class="dropdown-ite-mob"> Advertise with Us </a>
-          </div>
-        </div>
-        <div class="relative py-2 border-b border-gray-200">
-          <button
-            onclick="toggleDropdown('mobilehelp')"
-            class="hover:text-red-500 flex items-center justify-between w-full cursor-pointer"
-          >
-            <span>Help Center </span>
-            <span class="icon-[tabler--chevron-down]"></span>
-          </button>
-          <div id="mobilehelp" class="dropdown-mobile">
-            <a href="./faqs.html" class="dropdown-ite-mob">FAQs</a>
-            <a href="#" class="dropdown-ite-mob">ToS, ToC</a>
-            <a href="./sms-commands.html" class="dropdown-ite-mob">SMS Commands</a>
-            <a href="./contact-us.html" class="dropdown-ite-mob">Contact Us</a>
-          </div>
-        </div>
       </div>
     </nav>
     <!-- navbar section end -->
@@ -453,11 +472,11 @@
         id="go_to_top"
       >
         <button class="block size-12 bg-red-400 text-white border-2 border-[#FFB29C] rounded-full">
-          <span class="icon-[ix--arrow-up] size-full"></span>
+          <!-- <span class="icon-[ix--arrow-up] size-full"></span> -->
+          <span class="iconify size-full" data-icon="ix:arrow-up" data-inline="false"></span>
         </button>
       </div>
     </footer>
     <!-- end footer -->
-    <script type="module" src="/src/assets/js/main.ts"></script>
   </body>
 </html>

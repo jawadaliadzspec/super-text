@@ -1,51 +1,35 @@
-import '../css/main.css';
-import Swiper from 'swiper/bundle';
+// import '../css/main.css';
+// import Swiper from 'swiper/bundle';
 
-// mbile toggle menu
-const menuBtn = document.getElementById('menuBtn')!;
-const mobileMenu = document.getElementById('mobile_menu')!;
-
-menuBtn.addEventListener('click', () => {
-  const isHidden = mobileMenu.classList.contains('opacity-0');
-
-  if (isHidden) {
-    mobileMenu.classList.remove('opacity-0', '-translate-y-10', 'pointer-events-none');
-    mobileMenu.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
-  } else {
-    mobileMenu.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
-    mobileMenu.classList.add('opacity-0', '-translate-y-10', 'pointer-events-none');
-  }
-});
-
-// handle dropdowns
 window.onload = function () {
-  function toggleDropdown(id: string) {
-    const dropdown = document.getElementById(id);
-    const isMobile = window.innerWidth <= 1152;
-    const allDropdowns = document.querySelectorAll('.dropdown-menu');
-    const allMobileDropdowns = document.querySelectorAll('.dropdown-mobile');
+  // toggle menus
+  function toggleMenu(menuId, type) {
+    const menu = document.getElementById(menuId);
+    if (!menu) return;
 
-    if (!dropdown) return;
-
-    if (isMobile) {
-      allMobileDropdowns.forEach((el) => {
-        if (el !== dropdown) el.classList.remove('active');
+    const hideMenus = (selector, excludeId) => {
+      document.querySelectorAll(selector).forEach((el) => {
+        if (el.id !== excludeId) el.classList.add('hidden');
       });
+    };
+
+    if (type === 'menu' || type === 'mobile') {
+      hideMenus('.dropdown-menu,.dropdown-mobile', menuId);
+    } else if (type === 'language') {
+      hideMenus('.dropdown-menu', menuId);
+      document.getElementById('mobile_dropdown')?.classList.add('hidden');
     } else {
-      allDropdowns.forEach((el) => {
-        if (el !== dropdown) el.classList.remove('active');
-      });
+      hideMenus('.dropdown-menu', menuId);
     }
 
-    dropdown!.classList.toggle('active');
+    menu.classList.toggle('hidden');
   }
-  window.toggleDropdown = toggleDropdown;
-
-  function toggleFAQ(id: number) {
+  // toggle faqs
+  function toggleFAQ(id) {
     const content = document.getElementById(`faq-${id}`);
     const icon = document.getElementById(`icon-${id}`);
-    const allContents = document.querySelectorAll<HTMLElement>('.faq_content');
-    const allIcons = document.querySelectorAll<HTMLElement>('.faq_icon');
+    const allContents = document.querySelectorAll('.faq_content');
+    const allIcons = document.querySelectorAll('.faq_icon');
 
     if (!content || !icon) return;
 
@@ -54,36 +38,35 @@ window.onload = function () {
     // Close all FAQs before opening the selected one
     allContents.forEach((el) => el.classList.add('hidden'));
     allIcons.forEach((el) => {
-      {
-        el.textContent = '+';
-        el.classList.remove('bg-red-500', 'text-white');
-        el.classList.add('border', 'border-gray-400', 'text-black');
-      }
+      el.setAttribute('data-icon', 'iconamoon:sign-plus');
+      el.classList.remove('bg-red-500', 'text-white');
+      el.classList.add('border', 'border-gray-400', 'text-black');
     });
 
     if (isOpen) {
       content.classList.add('hidden');
-      icon.textContent = '+';
+      icon.setAttribute('data-icon', 'iconamoon:sign-plus');
       icon.classList.remove('bg-red-500', 'text-white');
       icon.classList.add('border', 'border-gray-400', 'text-black');
     } else {
       content.classList.remove('hidden');
-      icon.textContent = '-';
+      icon.setAttribute('data-icon', 'iconamoon:sign-minus');
       icon.classList.add('bg-red-500', 'text-white');
       icon.classList.remove('border', 'border-gray-400', 'text-black');
     }
   }
 
+  window.toggleMenu = toggleMenu;
   window.toggleFAQ = toggleFAQ;
 };
 
 // preloader
 window.addEventListener('load', () => {
   setTimeout(() => {
-    document.getElementById('preloader')!.classList.add('opacity-0');
+    document.getElementById('preloader').classList.add('opacity-0');
     setTimeout(() => {
-      document.getElementById('preloader')!.style.display = 'none';
-      document.getElementById('content')!.classList.remove('opacity-0');
+      document.getElementById('preloader').style.display = 'none';
+      document.getElementById('content').classList.remove('opacity-0');
     }, 100);
   }, 1000);
 });
@@ -146,16 +129,16 @@ const goTopBtn = document.getElementById('go_to_top');
 // Show the button when scrolling down
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {
-    goTopBtn!.classList.add('opacity-100', 'translate-y-0');
-    goTopBtn!.classList.remove('opacity-0', 'translate-y-10');
+    goTopBtn.classList.add('opacity-100', 'translate-y-0');
+    goTopBtn.classList.remove('opacity-0', 'translate-y-10');
   } else {
-    goTopBtn!.classList.add('opacity-0', 'translate-y-10');
-    goTopBtn!.classList.remove('opacity-100', 'translate-y-0');
+    goTopBtn.classList.add('opacity-0', 'translate-y-10');
+    goTopBtn.classList.remove('opacity-100', 'translate-y-0');
   }
 });
 
 // Scroll to top when button is clicked
-goTopBtn!.addEventListener('click', (event) => {
+goTopBtn.addEventListener('click', (event) => {
   event.preventDefault();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
