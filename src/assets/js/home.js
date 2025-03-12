@@ -33,7 +33,7 @@ const translations = {
     ind: {
         heroHeading: "Dengan kalian, lebih menarik",
         heroParaghrap: "Supertext membuat percakapan online dan SMS offline menjadi satu, memungkinkan percakapan kelompok dengan keluarga, teman, ataupun teman kerja, tanpa perduli akses internet ataupun model ponsel.",
-        sectionNoDataHeading:"",
+        sectionNoDataHeading:"No data? No internet?  No problem!",
         sectionNoDataParaghrap: "Bayangkan ini: kalian sedang berbicara dengan keluarga, kolega atau teman dan beberapa orang online menggunakan aplikasi kita, sementara lainnya offline, hanya mengandalkan SMS. Yang mengagumkan? Platform kita menggabungkan semua pesan menjadi satu, membuat percakapan grup bahkan ketika orang-orang sedang offline.",
         communitiesSectionHeading: "We love communities",
         communitiesSectionParagraph:"Tentukan komunitas kalian dengan Supertext. Kami telah merancang ruang di mana semua orang dilihat, didengar dan dihargai.Terhubung dan berkembang dengan yang lain untuk berbagi minat kalian, dan gapai semua bersama! Sangat mudah membuat komunitas sendiri atau bergabung dengan komunitas  yang sudah ada.",
@@ -91,12 +91,58 @@ const translations = {
 const languageSelector = document.getElementById("language-selector");
 const heroHeading = document.getElementById("heroHeading");
 const heroParaghrap = document.getElementById("heroParaghrap");
+const sectionNoDataHeading = document.getElementById("sectionNoDataHeading");
+const sectionNoDataParaghrap = document.getElementById("sectionNoDataParaghrap");
+const communitiesSectionHeading = document.getElementById("communitiesSectionHeading");
+const communitiesSectionParagraph = document.getElementById("communitiesSectionParagraph");
+const featureSectionHeading = document.getElementById("featureSectionHeading");
+const slideOneHeading = document.getElementById("slideOneHeading");
+const slideOneParagraph = document.getElementById("slideOneParagraph");
+const slideTwoHeading = document.getElementById("slideTwoHeading");
+const slideTwoParagraph = document.getElementById("slideTwoParagraph");
+const slideThreeHeading = document.getElementById("slideThreeHeading");
+const slideThreeParagraph = document.getElementById("slideThreeParagraph");
+const slideFourHeading = document.getElementById("slideFourHeading");
+const slideFourParagraph = document.getElementById("slideFourParagraph");
+const testimonialsHeading = document.getElementById("testimonialsHeading");
+const testimonialSlideOneHeading = document.getElementById("testimonialSlideOneHeading");
+const testimonialSlideOneParagraph = document.getElementById("testimonialSlideOneParagraph");
+const superTextSlideOneHeading = document.getElementById("superTextSlideOneHeading");
+const superTextSlideOneParagraph = document.getElementById("superTextSlideOneParagraph");
+const superTextSlideTwoHeading = document.getElementById("superTextSlideTwoHeading");
+const superTextSlideTwoParagraph = document.getElementById("superTextSlideTwoParagraph");
+const superTextSlideThreeHeading = document.getElementById("superTextSlideThreeHeading");
+const superTextSlideThreeParagraph = document.getElementById("superTextSlideThreeParagraph");
+
 
 // Function to change language
 function changeLanguage(lang) {
     localStorage.setItem("selectedLanguage", lang); // Save selection
     heroHeading.textContent = translations[lang].heroHeading;
     heroParaghrap.textContent = translations[lang].heroParaghrap;
+    sectionNoDataHeading.textContent = translations[lang].sectionNoDataHeading;
+    sectionNoDataParaghrap.textContent = translations[lang].sectionNoDataParaghrap;
+    communitiesSectionHeading.textContent = translations[lang].communitiesSectionHeading;
+    communitiesSectionParagraph.textContent = translations[lang].communitiesSectionParagraph;
+    featureSectionHeading.textContent = translations[lang].featureSectionHeading;
+    slideOneHeading.textContent = translations[lang].slideOneHeading;
+    slideOneParagraph.textContent = translations[lang].slideOneParagraph;
+    slideTwoHeading.textContent = translations[lang].slideTwoHeading;
+    slideTwoParagraph.textContent = translations[lang].slideTwoParagraph;
+    slideThreeHeading.textContent = translations[lang].slideThreeHeading;
+    slideThreeParagraph.textContent = translations[lang].slideThreeParagraph;
+    slideFourHeading.textContent = translations[lang].slideFourHeading;
+    slideFourParagraph.textContent = translations[lang].slideFourParagraph;
+    testimonialsHeading.textContent = translations[lang].testimonialsHeading;
+    testimonialSlideOneHeading.textContent = translations[lang].testimonialSlideOneHeading;
+    testimonialSlideOneParagraph.textContent = translations[lang].testimonialSlideOneParagraph;
+    superTextHeading.textContent = translations[lang].superTextHeading;
+    superTextSlideOneHeading.textContent = translations[lang].superTextSlideOneHeading;
+    superTextSlideOneParagraph.textContent = translations[lang].superTextSlideOneParagraph;
+    superTextSlideTwoHeading.textContent = translations[lang].superTextSlideTwoHeading;
+    superTextSlideTwoParagraph.textContent = translations[lang].superTextSlideTwoParagraph;
+    superTextSlideThreeHeading.textContent = translations[lang].superTextSlideThreeHeading;
+    superTextSlideThreeParagraph.textContent = translations[lang].superTextSlideThreeParagraph;
 }
 
 // Load saved language from localStorage
