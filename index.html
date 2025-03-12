@@ -135,6 +135,11 @@
                 data-inline="false"
               ></span>
             </button>
+            <select id="language-selector">
+              <option value="en">English</option>
+              <option value="sw">Swedish</option>
+              <option value="ind">Indonesia</option>
+            </select>
             <div id="language_dropdown" class="dropdown-menu hidden">
               <a href="#" class="dropdown-item"> 🇬🇧 English </a>
               <a href="#" class="dropdown-item"> 🇫🇷 French </a>
@@ -408,7 +413,10 @@
       >
         <div class="flex flex-col justify-center items-center gap-2 4xl:flex-row">
           <div class="w-full 4xl:w-1/2">
-            <h1 id="sectionNoDataHeading" class="text-3xl 5xl:text-5xl font-bold text-[#535C63] mb-6">
+            <h1
+              id="sectionNoDataHeading"
+              class="text-3xl 5xl:text-5xl font-bold text-[#535C63] mb-6"
+            >
               No data? No internet? No problem!
             </h1>
             <p id="sectionNoDataParaghrap" class="text-lg text-[#1b1c20]">
@@ -980,5 +988,6 @@
       </div>
     </footer>
     <!-- end footer -->
+    <script src="./src/assets/js/home.js"></script>
   </body>
 </html>

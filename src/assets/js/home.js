@@ -23,14 +23,14 @@ const translations = {
 
 // Get elements
 const languageSelector = document.getElementById("language-selector");
-const welcomeText = document.getElementById("welcome-text");
-const descriptionText = document.getElementById("description");
+const heroHeading = document.getElementById("heroHeading");
+const heroParaghrap = document.getElementById("heroParaghrap");
 
 // Function to change language
 function changeLanguage(lang) {
     localStorage.setItem("selectedLanguage", lang); // Save selection
-    welcomeText.textContent = translations[lang].welcome;
-    descriptionText.textContent = translations[lang].description;
+    heroHeading.textContent = translations[lang].heroHeading;
+    heroParaghrap.textContent = translations[lang].heroParaghrap;
 }
 
 // Load saved language from localStorage
