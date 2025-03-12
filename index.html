@@ -117,35 +117,47 @@
         </div>
         <!-- navbar buttons -->
         <div class="flex items-center gap-3">
+          <!-- language changer  -->
           <div class="relative">
             <button
-              onclick="toggleMenu('language_dropdown','language')"
-              class="flex items-center px-2 py-2 gap-1 rounded-md bg-[#F6FAF8] cursor-pointer"
+              onclick="toggleDropdown()"
+              id="custom-select"
+              class="flex items-center px-2 py-2 rounded-md bg-[#F6FAF8] cursor-pointer w-full"
             >
-              <img
-                class="size-8 mr-1 6xl:h-6 6xl:w-8 6xl::mr-2"
-                src="./src/assets/images/header/language-flag.svg"
-                alt="language flag"
-              />
-              <span class="hidden 6xl:flex"> Language </span>
-
+              <span id="selected-option">🇬🇧 English</span>
               <span
                 class="iconify size-6"
                 data-icon="tabler:chevron-down"
                 data-inline="false"
               ></span>
             </button>
-            <select id="language-selector">
-              <option value="en">English</option>
-              <option value="sw">Swedish</option>
-              <option value="ind">Indonesia</option>
-            </select>
-            <div id="language_dropdown" class="dropdown-menu hidden">
-              <a href="#" class="dropdown-item"> 🇬🇧 English </a>
-              <a href="#" class="dropdown-item"> 🇫🇷 French </a>
-              <a href="#" class="dropdown-item">🇩🇪 German</a>
+
+            <!-- Dropdown Options -->
+            <div
+              id="custom-dropdown"
+              class="absolute left-0 mt-2 bg-white border border-gray-300 rounded-md shadow-lg hidden w-40"
+            >
+              <div
+                class="p-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
+                onclick="selectOption('en', '🇬🇧 English')"
+              >
+                🇬🇧 English
+              </div>
+              <div
+                class="p-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
+                onclick="selectOption('sw', '🇸🇪 Swedish')"
+              >
+                🇸🇪 Swedish
+              </div>
+              <div
+                class="p-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
+                onclick="selectOption('ind', '🇮🇩 Indonesian')"
+              >
+                🇮🇩 Indonesian
+              </div>
             </div>
           </div>
+          <!-- end custom select box -->
           <a href="#" class="p-2 rounded-full xl:hidden flex bg-[#309CAC] text-white">
             <span class="iconify size-6" data-icon="tabler:download" data-inline="false"></span>
           </a>
@@ -492,7 +504,8 @@
       <!-- features for a better experience slider -->
       <section class="relative pt-8 pb-24 bg-[url(./src/assets/images/home/feature-slider-bg.png)]">
         <h2
-         id="featureSectionHeading" class="text-3xl 5xl:text-5xl text-[#fff] mb-8 text-left 2xl:text-center px-2 font-black"
+          id="featureSectionHeading"
+          class="text-3xl 5xl:text-5xl text-[#fff] mb-8 text-left 2xl:text-center px-2 font-black"
         >
           Features for a better experience
         </h2>
@@ -520,7 +533,9 @@
                     <img src="./src/assets/images/home/feature-slide-01.png" class="h-8 2xl:h-14" />
                   </div>
                   <div class="w-[80%]">
-                    <h5 id="slideOneHeading" class="text-lg 6xl:text-2xl text-[#535c63] font-bold">Mention</h5>
+                    <h5 id="slideOneHeading" class="text-lg 6xl:text-2xl text-[#535c63] font-bold">
+                      Mention
+                    </h5>
                     <p id="slideOneParagraph" class="text-sm 6xl:text-lg text-[#535c63]">
                       Draw attention with our mention feature. Just add '@' before a name in your
                       message.
@@ -534,7 +549,9 @@
                     <img src="./src/assets/images/home/feature-slide-02.png" class="h-8 2xl:h-14" />
                   </div>
                   <div class="w-[80%]">
-                    <h5 id="slideTwoHeading" class="text-xl 6xl:text-2xl text-[#535c63] font-black">React</h5>
+                    <h5 id="slideTwoHeading" class="text-xl 6xl:text-2xl text-[#535c63] font-black">
+                      React
+                    </h5>
                     <p id="slideTwoParagraph" class="text-sm 6xl:text-lg text-[#535c63]">
                       Share your feelings by reacting with emojis instead of a text message.
                     </p>
@@ -547,7 +564,12 @@
                     <img src="./src/assets/images/home/feature-slide-03.png" class="h-8 2xl:h-14" />
                   </div>
                   <div class="w-[80%]">
-                    <h5 id="slideThreeHeading" class="text-xl 6xl:text-2xl text-[#535c63] font-black">Stickers</h5>
+                    <h5
+                      id="slideThreeHeading"
+                      class="text-xl 6xl:text-2xl text-[#535c63] font-black"
+                    >
+                      Stickers
+                    </h5>
                     <p id="slideThreeParagraph" class="text-sm 6xl:text-lg text-[#535c63]">
                       Express yourself with custom stickers from our handpicked illustrators.
                     </p>
@@ -587,7 +609,12 @@
                     <img src="./src/assets/images/home/feature-slide-06.png" class="h-8 2xl:h-14" />
                   </div>
                   <div class="w-[80%]">
-                    <h5 id="slideFourHeading" class="text-xl 6xl:text-2xl text-[#535c63] font-black">Share Files</h5>
+                    <h5
+                      id="slideFourHeading"
+                      class="text-xl 6xl:text-2xl text-[#535c63] font-black"
+                    >
+                      Share Files
+                    </h5>
                     <p id="slideFourParagraph" class="text-sm 6xl:text-lg text-[#535c63]">
                       Share files, photos, videos, voice messages with colleagues or friends
                     </p>
@@ -618,7 +645,10 @@
 
       <!-- testimonials slider -->
       <section class="pt-8 pb-24 relative px-4 6xl:px-32">
-        <h2 id="testimonialsHeading" class="text-[#535c63] text-center text-3xl 5xl:text-5xl font-bold mb-8">
+        <h2
+          id="testimonialsHeading"
+          class="text-[#535c63] text-center text-3xl 5xl:text-5xl font-bold mb-8"
+        >
           What do our users say?
         </h2>
         <div class="flex items-center gap-1 xl:gap-5 px-1 5xl:px-4">
@@ -646,7 +676,7 @@
                 <div
                   class="p-4 6xl:p-16 border border-[#f04524] rounded-lg text-center shadow-lg relative"
                 >
-                  <h2  class="text-[#535c63] text-2xl font-bold">
+                  <h2 class="text-[#535c63] text-2xl font-bold">
                     <q id="testimonialSlideOneHeading">Connecting with home town</q>
                   </h2>
                   <p class="text-[#383a47] text-lg">
@@ -707,7 +737,7 @@
                   <h2 class="text-gray-600 text-2xl font-bold">
                     <q>Connecting with home town</q>
                   </h2>
-                  <p  class="text-gray-600">
+                  <p class="text-gray-600">
                     <q
                       >I use Supertext to chat with my parents in hometown, they have no internet
                       connection. Only Supertext can send app message through SMS. Thank you
@@ -754,7 +784,9 @@
       <section class="bg-[#dbeae5] pt-8 pb-28 2xl:pb-8 relative px-1 6xl:px-32">
         <div class="text-center">
           <img src="./src/assets/images/home/blg-icon.png" class="mx-auto" />
-          <h2 id="superTextHeading" class="text-3xl 5xl:text-5xl font-bold my-8">Why use Supertext?</h2>
+          <h2 id="superTextHeading" class="text-3xl 5xl:text-5xl font-bold my-8">
+            Why use Supertext?
+          </h2>
         </div>
         <div class="flex items-center gap-1 xl:gap-5 px-1 5xl:px-4">
           <div
@@ -787,7 +819,10 @@
                   <div
                     class="text-center absolute bottom-0 h-auto bg-gray-700/70 rounded-2xl p-2 2xl:p-6"
                   >
-                    <h3 id="superTextSlideOneHeading" class="text-white text-lg 2xl:text-2xl font-bold my-4">
+                    <h3
+                      id="superTextSlideOneHeading"
+                      class="text-white text-lg 2xl:text-2xl font-bold my-4"
+                    >
                       University groups
                     </h3>
                     <p id="superTextSlideOneParagraph" class="text-white text-sm 2xl:text-lg">
@@ -808,7 +843,12 @@
                   <div
                     class="text-center absolute bottom-0 h-auto bg-gray-700/70 rounded-2xl p-2 2xl:p-6"
                   >
-                    <h3 id="superTextSlideTwoHeading" class="text-white text-lg 2xl:text-2xl font-bold my-4">Communities</h3>
+                    <h3
+                      id="superTextSlideTwoHeading"
+                      class="text-white text-lg 2xl:text-2xl font-bold my-4"
+                    >
+                      Communities
+                    </h3>
                     <p id="superTextSlideTwoParagraph" class="text-white text-sm 2xl:text-lg">
                       Streamline your school events with dedicated channels. Quickly set up polls to
                       decide on activities everyone loves, and send instant updates to keep the
@@ -827,7 +867,12 @@
                   <div
                     class="text-center absolute bottom-0 h-auto bg-gray-700/70 rounded-2xl p-2 2xl:p-6"
                   >
-                    <h3 id="superTextSlideThreeHeading" class="text-white text-lg 2xl:text-2xl font-bold my-4">Family & Friends</h3>
+                    <h3
+                      id="superTextSlideThreeHeading"
+                      class="text-white text-lg 2xl:text-2xl font-bold my-4"
+                    >
+                      Family & Friends
+                    </h3>
                     <p id="superTextSlideThreeParagraph" class="text-white text-sm 2xl:text-lg">
                       Streamline your school events with dedicated channels. Quickly set up polls to
                       decide on activities everyone loves, and send instant updates to keep the
