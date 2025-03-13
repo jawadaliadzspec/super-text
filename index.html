@@ -29,7 +29,11 @@
         --breakpoint-5xl: 64rem; /* 1024px */
         --breakpoint-6xl: 72rem; /* 1152px */
         --breakpoint-7xl: 80rem; /* 1280px */
-        --breakpoint-8xl: 88rem; /* 1600px */
+        --breakpoint-8xl: 88rem; /* 1408px */
+        --breakpoint-9xl: 100rem; /* 1600px */
+        --breakpoint-10xl: 110rem; /* 1760px */
+        --breakpoint-11xl: 120rem; /* 1920px */
+        --breakpoint-12xl: 130rem; /* 2080px */
       }
 
       .feature_slider_pagination {
@@ -76,7 +80,9 @@
 
     <!-- navbar section -->
     <nav id="header" class="bg-white shadow-md w-full fixed top-0 z-50">
-      <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+      <div
+        class="12xl:max-w-7xl 12xl:mx-auto px-2 3xl:px-4 8xl:px-24 h-24 flex justify-between items-center"
+      >
         <div class="flex items-center gap-2">
           <a href="index.html">
             <img src="./src/assets/images/header/logo.png" alt="Supertext Logo" class="h-12" />
@@ -124,7 +130,14 @@
               id="custom-select"
               class="flex items-center px-2 py-2 rounded-md bg-[#F6FAF8] cursor-pointer w-full"
             >
-              <span id="selected-option">🇬🇧 English</span>
+              <div id="selected-option" class="flex gap-1 items-center">
+                <span
+                  class="iconify size-8"
+                  data-icon="twemoji:flag-australia"
+                  data-inline="false"
+                ></span>
+                <span class="hidden xl:flex"> English </span>
+              </div>
               <span
                 class="iconify size-6"
                 data-icon="tabler:chevron-down"
@@ -139,21 +152,36 @@
             >
               <div
                 class="p-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
-                onclick="selectOption('en', '🇬🇧 English')"
+                onclick="selectOption('en', `<span class='iconify size-8' data-icon='twemoji:flag-australia'></span> <span class='hidden xl:flex'> English </span>`)"
               >
-                🇬🇧 English
+                <span
+                  class="iconify size-8"
+                  data-icon="twemoji:flag-australia"
+                  data-inline="false"
+                ></span>
+                <span> English </span>
               </div>
               <div
                 class="p-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
-                onclick="selectOption('sw', '🇸🇪 Swedish')"
+                onclick="selectOption('sw', `<span class='iconify size-8' data-icon='twemoji:flag-sweden'></span> <span class='hidden xl:flex'> Swedish </span>`)"
               >
-                🇸🇪 Swedish
+                <span
+                  class="iconify size-8"
+                  data-icon="twemoji:flag-sweden"
+                  data-inline="false"
+                ></span>
+                <span> Swedish </span>
               </div>
               <div
                 class="p-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
-                onclick="selectOption('ind', '🇮🇩 Indonesian')"
+                onclick="selectOption('ind', `<span class='iconify size-8' data-icon='twemoji:flag-indonesia'></span> <span class='hidden xl:flex'> Indonesian </span>`)"
               >
-                🇮🇩 Indonesian
+                <span
+                  class="iconify size-8"
+                  data-icon="twemoji:flag-indonesia"
+                  data-inline="false"
+                ></span>
+                <span> Indonesian </span>
               </div>
             </div>
           </div>
@@ -267,7 +295,10 @@
     </nav>
     <!-- navbar section end -->
 
-    <main id="content" class="opacity-0 transition-opacity duration-500">
+    <main
+      id="content"
+      class="12xl:max-w-7xl 12xl:mx-auto opacity-0 transition-opacity duration-500"
+    >
       <!-- hero section -->
       <section
         class="bg-cover bg-no-repeat py-0 3xl:py-16 mt-16 flex items-end bg-[url('./src/assets/images/home/desktop_hero_banner.png')]"
@@ -360,55 +391,55 @@
       <!-- hero section End -->
 
       <!-- telco partners slider -->
-      <section class="px-5 xl:px-16 relative mb-8">
+      <section class="px-2 3xl:px-4 8xl:px-24 px-5 relative mb-8">
         <h2 class="text-center text-[#535C63] text-4xl font-bold py-8">Telco partners</h2>
         <div class="w-full flex gap-5 items-center flex-wrap justify-center 3xl:justify-between">
-          <div class="w-28">
+          <div class="w-28 order-1 4xl:order-3">
             <img
               class="size-full object-cover"
               src="./src/assets/images/telco-partners/c1.png"
               alt="image"
             />
           </div>
-          <div class="w-10">
+          <div class="w-10 order-2 4xl:order-2">
             <img
               class="size-full object-cover"
               src="./src/assets/images/telco-partners/c2.png"
               alt="image"
             />
           </div>
-          <div class="w-32">
+          <div class="w-32 order-3 4xl:order-4">
             <img
               class="size-full object-cover"
               src="./src/assets/images/telco-partners/c3.png"
               alt="image"
             />
           </div>
-          <div class="w-24">
+          <div class="w-24 order-4 4xl:order-8">
             <img src="./src/assets/images/telco-partners/c4.png" alt="image" />
           </div>
-          <div class="w-24">
+          <div class="w-24 order-5 4x:order-6">
             <img
               class="size-full object-cover"
               src="./src/assets/images/telco-partners/c5.png"
               alt="image"
             />
           </div>
-          <div class="w-24">
+          <div class="w-24 order-6 4xl:order-7">
             <img
               class="size-full object-cover"
               src="./src/assets/images/telco-partners/c6.png"
               alt="image"
             />
           </div>
-          <div class="w-24">
+          <div class="w-24 order-7 4xl:order-1">
             <img
               class="size-full object-cover"
               src="./src/assets/images/telco-partners/c7.png"
               alt="image"
             />
           </div>
-          <div class="w-24">
+          <div class="w-24 order-8 4xl:order-5">
             <img
               class="size-full object-cover"
               src="./src/assets/images/telco-partners/c8.png"
@@ -420,10 +451,8 @@
       <!-- telco partners slider end -->
 
       <!-- about section  -->
-      <section
-        class="bg-[#dbeae5] py-8 px-3 md:px-8 lg:px-10 xl:px-12 2xl:px-14 3xl:px-16 4xl:px-20"
-      >
-        <div class="flex flex-col justify-center items-center gap-2 4xl:flex-row">
+      <section class="bg-[#dbeae5] py-8 px-2 3xl:px-4 8xl:px-24">
+        <div class="px-2 flex flex-col justify-center items-center gap-2 4xl:flex-row">
           <div class="w-full 4xl:w-1/2">
             <h1
               id="sectionNoDataHeading"
@@ -509,7 +538,7 @@
         >
           Features for a better experience
         </h2>
-        <div class="flex items-center gap-1 xl:gap-5 px-2 5xl:px-4">
+        <div class="px-2 3xl:px-4 8xl:px-24 flex items-center gap-1 xl:gap-5">
           <div
             id="fs_btn_prev"
             class="absolute bottom-6 left-[35%] lg:left-[40%] 2xl:static bg-white text-red-500 flex justify-center items-center p-3 rounded-full"
@@ -644,14 +673,14 @@
       <!--end features for a better experience slider -->
 
       <!-- testimonials slider -->
-      <section class="pt-8 pb-24 relative px-4 6xl:px-32">
+      <section class="px-2 3xl:px-4 8xl:px-24 pt-8 pb-24 relative">
         <h2
           id="testimonialsHeading"
           class="text-[#535c63] text-center text-3xl 5xl:text-5xl font-bold mb-8"
         >
           What do our users say?
         </h2>
-        <div class="flex items-center gap-1 xl:gap-5 px-1 5xl:px-4">
+        <div class="flex items-center gap-1 xl:gap-5">
           <div
             id="testimonial_btn_prev"
             class="absolute bottom-8 left-[35%] lg:left-[40%] 2xl:static bg-[#f04524] text-white flex justify-center items-center p-3 rounded-full"
@@ -781,14 +810,14 @@
       <!--end testimonials slider -->
 
       <!--super text slider -->
-      <section class="bg-[#dbeae5] pt-8 pb-28 2xl:pb-8 relative px-1 6xl:px-32">
+      <section class="bg-[#dbeae5] pt-8 pb-28 2xl:pb-8 relative">
         <div class="text-center">
           <img src="./src/assets/images/home/blg-icon.png" class="mx-auto" />
           <h2 id="superTextHeading" class="text-3xl 5xl:text-5xl font-bold my-8">
             Why use Supertext?
           </h2>
         </div>
-        <div class="flex items-center gap-1 xl:gap-5 px-1 5xl:px-4">
+        <div class="px-2 3xl:px-4 8xl:px-24 flex items-center gap-1 xl:gap-5">
           <div
             id="supertext_btn_prev"
             class="absolute bottom-8 left-[35%] lg:left-[40%] 2xl:static bg-[#f04524] text-white flex justify-center items-center p-3 rounded-full"
@@ -941,8 +970,8 @@
     </main>
 
     <!--footer -->
-    <footer class="bg-white py-6">
-      <div class="container mx-auto px-4">
+    <footer class="12xl:max-w-7xl 12xl:mx-auto px-2 3xl:px-4 8xl:px-24 bg-white py-6">
+      <div class="mx-auto px-4">
         <div class="flex flex-col 2xl:flex-row 2xl:items-center gap-8">
           <a class="navbar-brand w-full 2xl:w-[20%]" href="index.html">
             <img src="./src/assets/images/header/logo.png" alt="Supertext Logo" class="h-12" />

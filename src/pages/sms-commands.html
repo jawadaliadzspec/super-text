@@ -29,7 +29,11 @@
         --breakpoint-5xl: 64rem; /* 1024px */
         --breakpoint-6xl: 72rem; /* 1152px */
         --breakpoint-7xl: 80rem; /* 1280px */
-        --breakpoint-8xl: 88rem; /* 1600px */
+        --breakpoint-8xl: 88rem; /* 1408px */
+        --breakpoint-9xl: 100rem; /* 1600px */
+        --breakpoint-10xl: 110rem; /* 1760px */
+        --breakpoint-11xl: 120rem; /* 1920px */
+        --breakpoint-12xl: 130rem; /* 2080px */
       }
 
       .feature_slider_pagination {
@@ -76,7 +80,7 @@
 
     <!-- navbar section -->
     <nav id="header" class="bg-white shadow-md w-full fixed top-0 z-50">
-      <div class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
+      <div class="max-w-7xl mx-auto px-4 h-24 flex justify-between items-center">
         <div class="flex items-center gap-2">
           <a href="../../index.html">
             <img src="../assets/images/header/logo.png" alt="Supertext Logo" class="h-12" />
@@ -231,7 +235,10 @@
       </div>
     </nav>
     <!-- navbar section end -->
-    <main id="content" class="mt-16 opacity-0 transition-opacity duration-500">
+    <main
+      id="content"
+      class="12xl:max-w-7xl 12xl:mx-auto mt-16 opacity-0 transition-opacity duration-500"
+    >
       <!-- hero section -->
       <section
         class="bg-[url('../assets/images/features/hero.png')] bg-no-repeat bg-cover bg-center pt-8"
@@ -242,8 +249,8 @@
       </section>
       <!--end hero section -->
 
-      <section class="bg-[#DCEAE5] flex justify-center items-center py-6 px-6">
-        <div class="max-w-7xl w-full">
+      <section class="bg-[#DCEAE5] flex justify-center items-center py-6">
+        <div class="max-w-7xl mx-auto px-4 w-full">
           <!-- Divider Text -->
           <p class="text-center text-gray-500 my-3">
             These are SMS commands that help you manage your account and groups
@@ -332,55 +339,55 @@
       </section>
 
       <!-- telco partners slider -->
-      <section class="py-16 px-3 lg:px-16 xl:px-32 relative">
-        <h2 class="text-center text-[#535C63] text-4xl font-bold mb-8">Telco partners</h2>
-        <div class="w-full flex gap-2 items-center flex-wrap justify-center 3xl:justify-between">
-          <div class="w-28">
+      <section class="max-w-7xl mx-auto px-5 xl:px-16 relative my-8">
+        <h2 class="text-center text-[#535C63] text-4xl font-bold py-8">Telco partners</h2>
+        <div class="w-full flex gap-5 items-center flex-wrap justify-center 3xl:justify-between">
+          <div class="w-28 order-1 4xl:order-3">
             <img
               class="size-full object-cover"
               src="../assets/images/telco-partners/c1.png"
               alt="image"
             />
           </div>
-          <div class="w-10">
+          <div class="w-10 order-2 4xl:order-2">
             <img
               class="size-full object-cover"
               src="../assets/images/telco-partners/c2.png"
               alt="image"
             />
           </div>
-          <div class="w-28">
+          <div class="w-32 order-3 4xl:order-4">
             <img
               class="size-full object-cover"
               src="../assets/images/telco-partners/c3.png"
               alt="image"
             />
           </div>
-          <div class="w-28">
+          <div class="w-24 order-4 4xl:order-8">
             <img src="../assets/images/telco-partners/c4.png" alt="image" />
           </div>
-          <div class="w-28">
+          <div class="w-24 order-5 4xl:order-6">
             <img
               class="size-full object-cover"
               src="../assets/images/telco-partners/c5.png"
               alt="image"
             />
           </div>
-          <div class="w-28">
+          <div class="w-24 order-6 4xl:order-7">
             <img
               class="size-full object-cover"
               src="../assets/images/telco-partners/c6.png"
               alt="image"
             />
           </div>
-          <div class="w-28">
+          <div class="w-24 order-7 4xl:order-1">
             <img
               class="size-full object-cover"
               src="../assets/images/telco-partners/c7.png"
               alt="image"
             />
           </div>
-          <div class="w-28">
+          <div class="w-24 order-8 4xl:order-5">
             <img
               class="size-full object-cover"
               src="../assets/images/telco-partners/c8.png"
@@ -393,7 +400,7 @@
     </main>
     <!--footer -->
     <footer class="bg-[#A8CBBD]/20 py-6">
-      <div class="container mx-auto px-4">
+      <div class="max-w-7xl mx-auto px-4">
         <div class="flex flex-col 2xl:flex-row 2xl:items-center gap-8">
           <a class="navbar-brand w-full 2xl:w-[20%]" href="../../index.html">
             <img src="../assets/images/header/logo.png" alt="Supertext Logo" class="h-12" />
@@ -456,7 +463,9 @@
         class="fixed bottom-4 right-4 z-[999] opacity-0 translate-y-10 transition-all duration-300 ease-in-out"
         id="go_to_top"
       >
-        <button class="block size-12 bg-[#ef4524] text-white border-2 border-[#FFB29C] rounded-full">
+        <button
+          class="block size-12 bg-[#ef4524] text-white border-2 border-[#FFB29C] rounded-full"
+        >
           <!-- <span class="icon-[ix--arrow-up] size-full"></span> -->
           <span class="iconify size-full" data-icon="ix:arrow-up" data-inline="false"></span>
         </button>

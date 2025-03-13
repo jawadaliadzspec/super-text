@@ -200,8 +200,12 @@ document.addEventListener('click', function (event) {
 // Load saved language from localStorage
 document.addEventListener('DOMContentLoaded', function () {
   const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
-  const langMap = { en: '🇬🇧 English', sw: '🇸🇪 Swedish', ind: '🇮🇩 Indonesian' };
-
+  const langMap = {
+    en: `<span class="iconify size-8" data-icon="twemoji:flag-australia" data-inline="false"></span> <span class="hidden xl:flex"> English </span>`,
+    sw: `<span class="iconify size-8" data-icon="twemoji:flag-sweden" data-inline="false"></span> <span class="hidden xl:flex"> Swedish </span>`,
+    ind: `<span class="iconify size-8" data-icon="twemoji:flag-indonesia" data-inline="false"></span> <span class="hidden xl:flex"> Indonesian </span>`
+  };
+  // <span class="iconify size-6" data-icon="tabler:chevron-down" data-inline="false"></span>;
   document.getElementById('selected-option').innerHTML = langMap[savedLanguage];
   changeLanguage(savedLanguage);
 });
