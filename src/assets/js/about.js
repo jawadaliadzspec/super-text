@@ -41,12 +41,32 @@ function changeLanguage(lang) {
     ourVissionParagraph.textContent = translations[lang].ourVissionParagraph;
 }
 
-// Load saved language from localStorage
-const savedLanguage = localStorage.getItem("selectedLanguage") || "en";
-languageSelector.value = savedLanguage;
-changeLanguage(savedLanguage);
-
-// Event listener for language selection
-languageSelector.addEventListener("change", (event) => {
-    changeLanguage(event.target.value);
-});
+function toggleDropdown() {
+    document.getElementById('custom-dropdown').classList.toggle('hidden');
+  }
+  
+  function selectOption(lang, text) {
+    document.getElementById('selected-option').innerHTML = text;
+    document.getElementById('custom-dropdown').classList.add('hidden');
+  
+    localStorage.setItem('selectedLanguage', lang);
+    changeLanguage(lang);
+  }
+  
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function (event) {
+    const dropdown = document.getElementById('custom-dropdown');
+    const button = document.getElementById('custom-select');
+    if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+      dropdown.classList.add('hidden');
+    }
+  });
+  
+  // Load saved language from localStorage
+  document.addEventListener('DOMContentLoaded', function () {
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+    const langMap = { en: '🇬🇧 English', sw: '🇸🇪 Swedish', ind: '🇮🇩 Indonesian' };
+  
+    document.getElementById('selected-option').innerHTML = langMap[savedLanguage];
+    changeLanguage(savedLanguage);
+  });
