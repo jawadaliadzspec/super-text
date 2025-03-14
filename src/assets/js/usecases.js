@@ -36,22 +36,33 @@ const translations = {
     },
 };
 
+
 // Get elements
 const languageSelector = document.getElementById("language-selector");
-const heroSectionParagraph = document.getElementById("heroSectionParagraph");
-const ourMissionHeading = document.getElementById("ourMissionHeading");
-const ourMissionParagraph = document.getElementById("ourMissionParagraph");
-const ourVissionHeading = document.getElementById("ourVissionHeading");
-const ourVissionParagraph = document.getElementById("ourVissionParagraph");
+const CommunityParagraph = document.getElementById("CommunityParagraph");
+const largeIndonesianHeading = document.getElementById("largeIndonesianHeading");
+const largeIndonesianParagraph = document.getElementById("largeIndonesianParagraph");
+const empoweringHeading = document.getElementById("empoweringHeading");
+const empoweringParagraph = document.getElementById("empoweringParagraph");
+const youthHeading = document.getElementById("youthHeading");
+const youthParagraph = document.getElementById("youthParagraph");
+const sportsAssociationsHeading = document.getElementById("sportsAssociationsHeading");
+const sportsAssociationsParagraph = document.getElementById("sportsAssociationsParagraph");
 
 // Function to change language
 function changeLanguage(lang) {
     localStorage.setItem("selectedLanguage", lang); // Save selection
-    heroSectionParagraph.textContent = translations[lang].heroSectionParagraph;
-    ourMissionParagraph.textContent = translations[lang].ourMissionParagraph;
-    ourMissionHeading.textContent = translations[lang].ourMissionHeading;
-    ourVissionHeading.textContent = translations[lang].ourVissionHeading;
-    ourVissionParagraph.textContent = translations[lang].ourVissionParagraph;
+    CommunityParagraph.textContent = translations[lang].CommunityParagraph;
+    largeIndonesianHeading.textContent = translations[lang].largeIndonesianHeading;
+    largeIndonesianParagraph.textContent = translations[lang].largeIndonesianParagraph;
+    empoweringHeading.textContent = translations[lang].empoweringHeading;
+    empoweringParagraph.textContent = translations[lang].empoweringParagraph;
+    youthHeading.textContent = translations[lang].youthHeading;
+    youthParagraph.textContent = translations[lang].youthParagraph;
+    sportsAssociationsHeading.textContent = translations[lang].sportsAssociationsHeading;
+    sportsAssociationsParagraph.textContent = translations[lang].sportsAssociationsParagraph;
+    
+    
 }
 
 function toggleDropdown() {

@@ -50,20 +50,37 @@ const translations = {
 
 // Get elements
 const languageSelector = document.getElementById("language-selector");
-const heroSectionParagraph = document.getElementById("heroSectionParagraph");
-const ourMissionHeading = document.getElementById("ourMissionHeading");
-const ourMissionParagraph = document.getElementById("ourMissionParagraph");
-const ourVissionHeading = document.getElementById("ourVissionHeading");
-const ourVissionParagraph = document.getElementById("ourVissionParagraph");
+const workOfflineHeading = document.getElementById("workOfflineHeading");
+const workOfflineParagraph = document.getElementById("workOfflineParagraph");
+const communicationHeading = document.getElementById("communicationHeading");
+const communicationParagraph = document.getElementById("communicationParagraph");
+const stickersHeading = document.getElementById("stickersHeading");
+const stickersParagraph = document.getElementById("stickersParagraph");
+const publicHeading = document.getElementById("publicHeading");
+const publicParagraph = document.getElementById("publicParagraph");
+const aiHeading = document.getElementById("aiHeading");
+const aiParagraph = document.getElementById("aiParagraph");
+const popularHeading = document.getElementById("popularHeading");
+const popularParagraph = document.getElementById("popularParagraph");
+
 
 // Function to change language
 function changeLanguage(lang) {
     localStorage.setItem("selectedLanguage", lang); // Save selection
-    heroSectionParagraph.textContent = translations[lang].heroSectionParagraph;
-    ourMissionParagraph.textContent = translations[lang].ourMissionParagraph;
-    ourMissionHeading.textContent = translations[lang].ourMissionHeading;
-    ourVissionHeading.textContent = translations[lang].ourVissionHeading;
-    ourVissionParagraph.textContent = translations[lang].ourVissionParagraph;
+    workOfflineHeading.textContent = translations[lang].workOfflineHeading;
+    workOfflineParagraph.textContent = translations[lang].workOfflineParagraph;
+    communicationHeading.textContent = translations[lang].communicationHeading;
+    communicationParagraph.textContent = translations[lang].communicationParagraph;
+    stickersHeading.textContent = translations[lang].stickersHeading;
+    stickersParagraph.textContent = translations[lang].stickersParagraph;
+    publicHeading.textContent = translations[lang].publicHeading;
+    publicParagraph.textContent = translations[lang].publicParagraph;
+    aiHeading.textContent = translations[lang].aiHeading;
+    aiParagraph.textContent = translations[lang].aiParagraph;
+    popularHeading.textContent = translations[lang].popularHeading;
+    popularParagraph.textContent = translations[lang].popularParagraph;
+
+
 }
 
 function toggleDropdown() {
