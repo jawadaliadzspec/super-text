@@ -33,9 +33,7 @@ window.onload = function () {
 
     if (!content || !icon) return;
 
-    const isOpen = !content.classList.contains('hidden');
-
-    // Close all FAQs before opening the selected one
+    // Close all FAQs and reset their icons
     allContents.forEach((el) => el.classList.add('hidden'));
     allIcons.forEach((el) => {
       el.setAttribute('data-icon', 'iconamoon:sign-plus');
@@ -43,12 +41,8 @@ window.onload = function () {
       el.classList.add('border', 'border-gray-400', 'text-black');
     });
 
-    if (isOpen) {
-      content.classList.add('hidden');
-      icon.setAttribute('data-icon', 'iconamoon:sign-plus');
-      icon.classList.remove('bg-red-500', 'text-white');
-      icon.classList.add('border', 'border-gray-400', 'text-black');
-    } else {
+    // If the clicked FAQ was already open, just close it
+    if (content.classList.contains('hidden')) {
       content.classList.remove('hidden');
       icon.setAttribute('data-icon', 'iconamoon:sign-minus');
       icon.classList.add('bg-red-500', 'text-white');
