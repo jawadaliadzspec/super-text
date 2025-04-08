@@ -47,9 +47,11 @@ window.onload = function () {
     const icon = document.getElementById(`icon-${id}`);
     const allContents = document.querySelectorAll('.faq_content');
     const allIcons = document.querySelectorAll('.faq_icon');
-
+  
     if (!content || !icon) return;
-
+  
+    const isAlreadyOpen = !content.classList.contains('hidden');
+  
     // Close all FAQs and reset their icons
     allContents.forEach((el) => el.classList.add('hidden'));
     allIcons.forEach((el) => {
@@ -57,15 +59,16 @@ window.onload = function () {
       el.classList.remove('bg-red-500', 'text-white');
       el.classList.add('border', 'border-gray-400', 'text-black');
     });
-
-    // If the clicked FAQ was already open, just close it
-    if (content.classList.contains('hidden')) {
+  
+    // If the clicked FAQ was NOT already open, open it
+    if (!isAlreadyOpen) {
       content.classList.remove('hidden');
       icon.setAttribute('data-icon', 'iconamoon:sign-minus');
       icon.classList.add('bg-red-500', 'text-white');
       icon.classList.remove('border', 'border-gray-400', 'text-black');
     }
   }
+  
 
   window.toggleMenu = toggleMenu;
   window.toggleFAQ = toggleFAQ;
